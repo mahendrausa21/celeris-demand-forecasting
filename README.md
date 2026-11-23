@@ -14,12 +14,34 @@ python -m venv .venv
 pip install -r requirements.txt
 # copy the 7 provided CSV files into data/raw/
 python run_pipeline.py            # cleaning -> anomalies -> backtest -> forecast (a few minutes)
-pytest -q                         # 39 automated checks
+pytest -q                         # 40 automated checks
 streamlit run dashboard/app.py    # the dashboard
 ```
 
 `python run_pipeline.py` writes everything into `outputs/`, including `outputs/submission.csv`.
 The dashboard reads only from `outputs/`; it contains no hand-typed data.
+
+## Dashboard pages
+
+The Streamlit dashboard has 14 pages. Most pages use the sidebar filters for product family, SKU, region,
+sales channel, and customer; use **Reset filters** to clear those selections.
+
+| Page | What it shows |
+|---|---|
+| **About this project** | Project workflow, headline coverage and forecast metrics, model comparison, launch-ramp evidence, and known limitations. |
+| **Executive overview** | Historical and forecast units and revenue, monthly trends, and demand mix by family, region, and channel. |
+| **Data health** | Data-quality issues, raw-versus-clean row counts, and history row-status breakdowns. |
+| **Demand explorer** | A family-to-SKU-to-region-to-customer drill-down with demand trends, seasonality, and demand profiles. |
+| **Anomaly monitor** | Anomaly counts and time-series context, plus a filterable, downloadable anomaly register. |
+| **Forecast & accuracy** | Forecast units by adjustment and rounded backtest accuracy by family, region, horizon, and model. |
+| **Procurement plan** | Order quantities and safety buffers for a selected service level, planning window, and grouping. |
+| **Planner exceptions** | Exception counts and types, with a filterable, downloadable register of suggested actions. |
+| **Stockouts & lost sales** | Lost and backordered units, estimated lost revenue, and breakdowns by month, reason, family, and SKU-region. |
+| **Lifecycle** | Launch and end-of-life (EOL) dates, lifecycle status, master-data mismatches, and predecessor/successor forecasts. |
+| **Data download** | CSV downloads of available outputs, filtered where the selected fields are present. |
+| **Macro drivers** | Macro-indicator lead/lag correlations, stable relationships, and correlation by lag. |
+| **What-if** | A scenario view of how a selected macro-indicator change could shift forecasts, including family summaries. |
+| **EV shift** | Aggregate EV, ICE, and universal application units, EV share, and the EV adoption index. This page is not segmented by the shared filters. |
 
 ## Project structure
 
@@ -33,7 +55,7 @@ pipeline/
   features.py        demand drivers: macro lead/lag with stability test, what-if sensitivities, EV shift, intermittency classes
   ranges.py          P10/P50/P90 ranges calibrated on backtest errors and checked on held-out origins
   planner.py         exception list for planners
-  tests/             39 pytest checks on every output
+  tests/             pytest checks on the pipeline outputs
 dashboard/app.py     Streamlit app (14 views, shared filters)
 run_pipeline.py      one command that rebuilds everything
 outputs/             generated files (see below)

@@ -1,0 +1,562 @@
+model,variant,origin,group_type,group,WAPE,Bias,Rows
+seasonal_naive,rounded,2023-03-01,overall,all,0.385417621071669,-0.06637639475917124,52768
+seasonal_naive,rounded,2023-03-01,family,Brake & Safety Systems,0.37358143957813295,-0.09434088674209269,7557
+seasonal_naive,rounded,2023-03-01,family,Chassis & Structural,0.37671179320702214,-0.16337766896838085,7619
+seasonal_naive,rounded,2023-03-01,family,Electrical Assemblies,0.4114840981792663,-0.058565714753152594,7100
+seasonal_naive,rounded,2023-03-01,family,Hydraulic Systems,0.39086359287517747,0.02409480421244599,7862
+seasonal_naive,rounded,2023-03-01,family,Powertrain Components,0.3634606607351143,-0.028207743324186196,7603
+seasonal_naive,rounded,2023-03-01,family,Precision Machined Parts,0.40111195942760175,-0.020346033349209352,8056
+seasonal_naive,rounded,2023-03-01,family,Thermal Management,0.39146306041329215,-0.09744315728599429,6971
+seasonal_naive,rounded,2023-03-01,region,Asia Pacific,0.36560491431167996,-0.0522050064656408,8845
+seasonal_naive,rounded,2023-03-01,region,Europe,0.3525000795022102,-0.04219977315369367,8842
+seasonal_naive,rounded,2023-03-01,region,India,0.38707986763651353,-0.0560571206775186,8881
+seasonal_naive,rounded,2023-03-01,region,Latin America,0.4343010680592908,-0.037120089000802096,8648
+seasonal_naive,rounded,2023-03-01,region,Middle East & Africa,0.4970090613053943,-0.28690004247486905,9006
+seasonal_naive,rounded,2023-03-01,region,North America,0.34233260444621144,-0.03474223900871352,8546
+seasonal_naive,rounded,2023-03-01,horizon,months 1-6,0.3805489419101358,-0.06434153741498358,16535
+seasonal_naive,rounded,2023-03-01,horizon,months 7-12,0.3864751268147398,0.00042547720383274106,16727
+seasonal_naive,rounded,2023-03-01,horizon,months 13-19,0.38843691800409114,-0.11926807176804632,19506
+moving_avg_12,rounded,2023-03-01,overall,all,0.5066032211417805,-0.0645092798043254,52768
+moving_avg_12,rounded,2023-03-01,family,Brake & Safety Systems,0.4868047676165159,-0.07648717865594709,7557
+moving_avg_12,rounded,2023-03-01,family,Chassis & Structural,0.4818042347586705,-0.148745022015029,7619
+moving_avg_12,rounded,2023-03-01,family,Electrical Assemblies,0.527642517942558,-0.0678308340760067,7100
+moving_avg_12,rounded,2023-03-01,family,Hydraulic Systems,0.5393906529014966,0.008538181767942443,7862
+moving_avg_12,rounded,2023-03-01,family,Powertrain Components,0.4929480641689534,-0.027480855811437492,7603
+moving_avg_12,rounded,2023-03-01,family,Precision Machined Parts,0.5161588335674846,-0.02091326189923436,8056
+moving_avg_12,rounded,2023-03-01,family,Thermal Management,0.5192502440134921,-0.10363442722902727,6971
+moving_avg_12,rounded,2023-03-01,region,Asia Pacific,0.4950939694363108,-0.058475297854766205,8845
+moving_avg_12,rounded,2023-03-01,region,Europe,0.5303560638985764,-0.03706923052460859,8842
+moving_avg_12,rounded,2023-03-01,region,India,0.4948039217836177,-0.05448261797257559,8881
+moving_avg_12,rounded,2023-03-01,region,Latin America,0.5202474341495879,-0.0503957108765238,8648
+moving_avg_12,rounded,2023-03-01,region,Middle East & Africa,0.5521555996035679,-0.2459737363726462,9006
+moving_avg_12,rounded,2023-03-01,region,North America,0.4730725905310937,-0.03350395918232117,8546
+moving_avg_12,rounded,2023-03-01,horizon,months 1-6,0.4983762979593473,-0.047366059130947595,16535
+moving_avg_12,rounded,2023-03-01,horizon,months 7-12,0.5110060746480535,-0.013810115223468315,16727
+moving_avg_12,rounded,2023-03-01,horizon,months 13-19,0.5096966242965164,-0.11692634921281078,19506
+level_x_family_seasonal,rounded,2023-03-01,overall,all,0.5014572021559263,-0.06881396173350489,52768
+level_x_family_seasonal,rounded,2023-03-01,family,Brake & Safety Systems,0.48769302255216607,-0.08663835489134546,7557
+level_x_family_seasonal,rounded,2023-03-01,family,Chassis & Structural,0.47884642865809435,-0.15185921166513427,7619
+level_x_family_seasonal,rounded,2023-03-01,family,Electrical Assemblies,0.5201684254033039,-0.07062931342538177,7100
+level_x_family_seasonal,rounded,2023-03-01,family,Hydraulic Systems,0.5326623446151083,0.0007046072332768036,7862
+level_x_family_seasonal,rounded,2023-03-01,family,Powertrain Components,0.486394806980374,-0.029509379102829227,7603
+level_x_family_seasonal,rounded,2023-03-01,family,Precision Machined Parts,0.5089906921863669,-0.029172779731033147,8056
+level_x_family_seasonal,rounded,2023-03-01,family,Thermal Management,0.5108059379669293,-0.09804763038694128,6971
+level_x_family_seasonal,rounded,2023-03-01,region,Asia Pacific,0.49042257050096505,-0.05002006578179046,8845
+level_x_family_seasonal,rounded,2023-03-01,region,Europe,0.5070990173526824,-0.051057379395147186,8842
+level_x_family_seasonal,rounded,2023-03-01,region,India,0.4972336557628334,-0.0687452441465998,8881
+level_x_family_seasonal,rounded,2023-03-01,region,Latin America,0.5167435242231675,-0.04237719553108696,8648
+level_x_family_seasonal,rounded,2023-03-01,region,Middle East & Africa,0.5686986761999151,-0.24155369531360613,9006
+level_x_family_seasonal,rounded,2023-03-01,region,North America,0.46647947520127225,-0.045750091110890234,8546
+level_x_family_seasonal,rounded,2023-03-01,horizon,months 1-6,0.49276479405302154,-0.07789372672920064,16535
+level_x_family_seasonal,rounded,2023-03-01,horizon,months 7-12,0.5091530617790249,0.02138122359821167,16727
+level_x_family_seasonal,rounded,2023-03-01,horizon,months 13-19,0.5023885366523849,-0.13092071116719756,19506
+series_seasonal_avg3,rounded,2023-03-01,overall,all,0.3570687052093583,-0.069634185691693,52768
+series_seasonal_avg3,rounded,2023-03-01,family,Brake & Safety Systems,0.33065992370949093,-0.07871538020985293,7557
+series_seasonal_avg3,rounded,2023-03-01,family,Chassis & Structural,0.3512212746337794,-0.1394348082818571,7619
+series_seasonal_avg3,rounded,2023-03-01,family,Electrical Assemblies,0.39093895440200804,-0.08245181233828018,7100
+series_seasonal_avg3,rounded,2023-03-01,family,Hydraulic Systems,0.34534043927425456,-0.007951009073545108,7862
+series_seasonal_avg3,rounded,2023-03-01,family,Powertrain Components,0.33784773678783336,-0.08695321436419881,7603
+series_seasonal_avg3,rounded,2023-03-01,family,Precision Machined Parts,0.38000962134502575,-0.062227604644094,8056
+series_seasonal_avg3,rounded,2023-03-01,family,Thermal Management,0.3757886280554022,-0.021850001700898337,6971
+series_seasonal_avg3,rounded,2023-03-01,region,Asia Pacific,0.3318986476300082,-0.01804434006934904,8845
+series_seasonal_avg3,rounded,2023-03-01,region,Europe,0.3307207140358502,-0.04869351367968029,8842
+series_seasonal_avg3,rounded,2023-03-01,region,India,0.355513062013039,-0.06423444739998728,8881
+series_seasonal_avg3,rounded,2023-03-01,region,Latin America,0.38672884803063373,-0.04171664270300204,8648
+series_seasonal_avg3,rounded,2023-03-01,region,Middle East & Africa,0.5010087781396008,-0.33287023927509557,9006
+series_seasonal_avg3,rounded,2023-03-01,region,North America,0.3167200907795779,-0.0455782228406719,8546
+series_seasonal_avg3,rounded,2023-03-01,horizon,months 1-6,0.34290569595451825,-0.0824977723402907,16535
+series_seasonal_avg3,rounded,2023-03-01,horizon,months 7-12,0.36205989287517876,0.024806248815357475,16727
+series_seasonal_avg3,rounded,2023-03-01,horizon,months 13-19,0.3643815959536337,-0.13202287784573738,19506
+series_seasonal_avg3_trend,rounded,2023-03-01,overall,all,0.35566448497982306,-0.054548677642822146,52768
+series_seasonal_avg3_trend,rounded,2023-03-01,family,Brake & Safety Systems,0.32804702780389233,-0.063139581374742,7557
+series_seasonal_avg3_trend,rounded,2023-03-01,family,Chassis & Structural,0.34859241324083334,-0.1261287252314072,7619
+series_seasonal_avg3_trend,rounded,2023-03-01,family,Electrical Assemblies,0.3891823704411695,-0.06616896787776243,7100
+series_seasonal_avg3_trend,rounded,2023-03-01,family,Hydraulic Systems,0.34564093353550496,0.00794755511651924,7862
+series_seasonal_avg3_trend,rounded,2023-03-01,family,Powertrain Components,0.336785579453313,-0.07116735880632674,7603
+series_seasonal_avg3_trend,rounded,2023-03-01,family,Precision Machined Parts,0.3804811151186752,-0.0462231434035149,8056
+series_seasonal_avg3_trend,rounded,2023-03-01,family,Thermal Management,0.3735905440519585,-0.00863009648018715,6971
+series_seasonal_avg3_trend,rounded,2023-03-01,region,Asia Pacific,0.3318986476300082,-0.01804434006934904,8845
+series_seasonal_avg3_trend,rounded,2023-03-01,region,Europe,0.3307207140358502,-0.04869351367968029,8842
+series_seasonal_avg3_trend,rounded,2023-03-01,region,India,0.3554911330060064,-0.06421251839295465,8881
+series_seasonal_avg3_trend,rounded,2023-03-01,region,Latin America,0.3862942738016305,-0.041833356924505766,8648
+series_seasonal_avg3_trend,rounded,2023-03-01,region,Middle East & Africa,0.4877796262211525,-0.16634220586153192,9006
+series_seasonal_avg3_trend,rounded,2023-03-01,region,North America,0.3159953450617897,-0.04502327469105125,8546
+series_seasonal_avg3_trend,rounded,2023-03-01,horizon,months 1-6,0.3406036731489732,-0.06830541376273387,16535
+series_seasonal_avg3_trend,rounded,2023-03-01,horizon,months 7-12,0.3636040702660359,0.04272003202345559,16727
+series_seasonal_avg3_trend,rounded,2023-03-01,horizon,months 13-19,0.3614200954600503,-0.11840608176183837,19506
+"ablation 1: shipped units, no rules",rounded,2023-03-01,overall,all,0.35904098729628847,-0.07284775862549746,52768
+"ablation 1: shipped units, no rules",rounded,2023-03-01,family,Brake & Safety Systems,0.32994456511168024,-0.06485989993624447,7557
+"ablation 1: shipped units, no rules",rounded,2023-03-01,family,Chassis & Structural,0.349711364500395,-0.12787321068908525,7619
+"ablation 1: shipped units, no rules",rounded,2023-03-01,family,Electrical Assemblies,0.4083842441307277,-0.2524788069006195,7100
+"ablation 1: shipped units, no rules",rounded,2023-03-01,family,Hydraulic Systems,0.3476235048683524,0.007629791070139506,7862
+"ablation 1: shipped units, no rules",rounded,2023-03-01,family,Powertrain Components,0.3376364322783134,-0.07337619527917552,7603
+"ablation 1: shipped units, no rules",rounded,2023-03-01,family,Precision Machined Parts,0.38238623716854825,-0.04704167574152568,8056
+"ablation 1: shipped units, no rules",rounded,2023-03-01,family,Thermal Management,0.37634076582293385,-0.008632713246857918,6971
+"ablation 1: shipped units, no rules",rounded,2023-03-01,region,Asia Pacific,0.33491594666961105,-0.03825663391732898,8845
+"ablation 1: shipped units, no rules",rounded,2023-03-01,region,Europe,0.3317553027974178,-0.06672673500323309,8842
+"ablation 1: shipped units, no rules",rounded,2023-03-01,region,India,0.3610852227000309,-0.08131495097770478,8881
+"ablation 1: shipped units, no rules",rounded,2023-03-01,region,Latin America,0.389470390595317,-0.05924860874164686,8648
+"ablation 1: shipped units, no rules",rounded,2023-03-01,region,Middle East & Africa,0.4918811057624239,-0.18141635990372362,9006
+"ablation 1: shipped units, no rules",rounded,2023-03-01,region,North America,0.31974331577377996,-0.06509251896763078,8546
+"ablation 1: shipped units, no rules",rounded,2023-03-01,horizon,months 1-6,0.3438575435864739,-0.08879600327456277,16535
+"ablation 1: shipped units, no rules",rounded,2023-03-01,horizon,months 7-12,0.36309906461288866,0.02713643238027323,16727
+"ablation 1: shipped units, no rules",rounded,2023-03-01,horizon,months 13-19,0.36787331698232256,-0.13706557026694213,19506
+ablation 2: + unconstrained demand,rounded,2023-03-01,overall,all,0.35587760776643335,-0.05464069888339594,52768
+ablation 2: + unconstrained demand,rounded,2023-03-01,family,Brake & Safety Systems,0.3288034492819399,-0.06371878410650414,7557
+ablation 2: + unconstrained demand,rounded,2023-03-01,family,Chassis & Structural,0.34859241324083334,-0.1261287252314072,7619
+ablation 2: + unconstrained demand,rounded,2023-03-01,family,Electrical Assemblies,0.38993580718907817,-0.06596661629403838,7100
+ablation 2: + unconstrained demand,rounded,2023-03-01,family,Hydraulic Systems,0.34564093353550496,0.00794755511651924,7862
+ablation 2: + unconstrained demand,rounded,2023-03-01,family,Powertrain Components,0.336785579453313,-0.07116735880632674,7603
+ablation 2: + unconstrained demand,rounded,2023-03-01,family,Precision Machined Parts,0.3804811151186752,-0.0462231434035149,8056
+ablation 2: + unconstrained demand,rounded,2023-03-01,family,Thermal Management,0.3736167117186662,-0.008656264146894814,6971
+ablation 2: + unconstrained demand,rounded,2023-03-01,region,Asia Pacific,0.3318986476300082,-0.01804434006934904,8845
+ablation 2: + unconstrained demand,rounded,2023-03-01,region,Europe,0.3307207140358502,-0.04869351367968029,8842
+ablation 2: + unconstrained demand,rounded,2023-03-01,region,India,0.355513062013039,-0.06423444739998728,8881
+ablation 2: + unconstrained demand,rounded,2023-03-01,region,Latin America,0.38672884803063373,-0.04171664270300204,8648
+ablation 2: + unconstrained demand,rounded,2023-03-01,region,Middle East & Africa,0.4877796262211525,-0.16634220586153192,9006
+ablation 2: + unconstrained demand,rounded,2023-03-01,region,North America,0.3167200907795779,-0.0455782228406719,8546
+ablation 2: + unconstrained demand,rounded,2023-03-01,horizon,months 1-6,0.34084939468439657,-0.06847095248133486,16535
+ablation 2: + unconstrained demand,rounded,2023-03-01,horizon,months 7-12,0.3638771179420158,0.04273328676500801,16727
+ablation 2: + unconstrained demand,rounded,2023-03-01,horizon,months 13-19,0.36156155544926266,-0.1185210816091837,19506
+ablation 3: + lost accounts,rounded,2023-03-01,overall,all,0.35587760776643335,-0.05464069888339594,52768
+ablation 3: + lost accounts,rounded,2023-03-01,family,Brake & Safety Systems,0.3288034492819399,-0.06371878410650414,7557
+ablation 3: + lost accounts,rounded,2023-03-01,family,Chassis & Structural,0.34859241324083334,-0.1261287252314072,7619
+ablation 3: + lost accounts,rounded,2023-03-01,family,Electrical Assemblies,0.38993580718907817,-0.06596661629403838,7100
+ablation 3: + lost accounts,rounded,2023-03-01,family,Hydraulic Systems,0.34564093353550496,0.00794755511651924,7862
+ablation 3: + lost accounts,rounded,2023-03-01,family,Powertrain Components,0.336785579453313,-0.07116735880632674,7603
+ablation 3: + lost accounts,rounded,2023-03-01,family,Precision Machined Parts,0.3804811151186752,-0.0462231434035149,8056
+ablation 3: + lost accounts,rounded,2023-03-01,family,Thermal Management,0.3736167117186662,-0.008656264146894814,6971
+ablation 3: + lost accounts,rounded,2023-03-01,region,Asia Pacific,0.3318986476300082,-0.01804434006934904,8845
+ablation 3: + lost accounts,rounded,2023-03-01,region,Europe,0.3307207140358502,-0.04869351367968029,8842
+ablation 3: + lost accounts,rounded,2023-03-01,region,India,0.355513062013039,-0.06423444739998728,8881
+ablation 3: + lost accounts,rounded,2023-03-01,region,Latin America,0.38672884803063373,-0.04171664270300204,8648
+ablation 3: + lost accounts,rounded,2023-03-01,region,Middle East & Africa,0.4877796262211525,-0.16634220586153192,9006
+ablation 3: + lost accounts,rounded,2023-03-01,region,North America,0.3167200907795779,-0.0455782228406719,8546
+ablation 3: + lost accounts,rounded,2023-03-01,horizon,months 1-6,0.34084939468439657,-0.06847095248133486,16535
+ablation 3: + lost accounts,rounded,2023-03-01,horizon,months 7-12,0.3638771179420158,0.04273328676500801,16727
+ablation 3: + lost accounts,rounded,2023-03-01,horizon,months 13-19,0.36156155544926266,-0.1185210816091837,19506
+croston_sba,rounded,2023-03-01,overall,all,0.5111170422540822,-0.12058527102446331,52768
+croston_sba,rounded,2023-03-01,family,Brake & Safety Systems,0.48455279281615715,-0.1283690472331183,7557
+croston_sba,rounded,2023-03-01,family,Chassis & Structural,0.4899146091894209,-0.18835320033541575,7619
+croston_sba,rounded,2023-03-01,family,Electrical Assemblies,0.5364254377467506,-0.13586401973573745,7100
+croston_sba,rounded,2023-03-01,family,Hydraulic Systems,0.537566963591839,-0.05192678992687973,7862
+croston_sba,rounded,2023-03-01,family,Powertrain Components,0.5010621573345204,-0.10329691382720363,7603
+croston_sba,rounded,2023-03-01,family,Precision Machined Parts,0.5227023055327521,-0.10084222669516373,8056
+croston_sba,rounded,2023-03-01,family,Thermal Management,0.5251091845893378,-0.1257644229636976,6971
+croston_sba,rounded,2023-03-01,region,Asia Pacific,0.4961407874704587,-0.10627857250541989,8845
+croston_sba,rounded,2023-03-01,region,Europe,0.5294105176123897,-0.07486988138270244,8842
+croston_sba,rounded,2023-03-01,region,India,0.49672928860108284,-0.08626213496426668,8881
+croston_sba,rounded,2023-03-01,region,Latin America,0.5186531675494732,-0.1091451800751441,8648
+croston_sba,rounded,2023-03-01,region,Middle East & Africa,0.605386344329605,-0.43493823446127705,9006
+croston_sba,rounded,2023-03-01,region,North America,0.47103709041513436,-0.07401724480667926,8546
+croston_sba,rounded,2023-03-01,horizon,months 1-6,0.5046771154360975,-0.10454158061024296,16535
+croston_sba,rounded,2023-03-01,horizon,months 7-12,0.5099894359709827,-0.07290107853832012,16727
+croston_sba,rounded,2023-03-01,horizon,months 13-19,0.5170505083400332,-0.1698222082006086,19506
+global_gbm,rounded,2023-03-01,overall,all,0.3141784415346434,-0.12403307984336472,52768
+global_gbm,rounded,2023-03-01,family,Brake & Safety Systems,0.3035541003447121,-0.08651300504641186,7557
+global_gbm,rounded,2023-03-01,family,Chassis & Structural,0.3179520226055117,-0.1835376655171577,7619
+global_gbm,rounded,2023-03-01,family,Electrical Assemblies,0.3341814878438362,-0.1194046558085668,7100
+global_gbm,rounded,2023-03-01,family,Hydraulic Systems,0.3019794627715242,-0.05332218856532987,7862
+global_gbm,rounded,2023-03-01,family,Powertrain Components,0.2931751460818509,-0.08695321436419881,7603
+global_gbm,rounded,2023-03-01,family,Precision Machined Parts,0.31696109099351155,-0.0962110568879975,8056
+global_gbm,rounded,2023-03-01,family,Thermal Management,0.3369296429945231,-0.23295503609829624,6971
+global_gbm,rounded,2023-03-01,region,Asia Pacific,0.29932838023488645,-0.12500451214669892,8845
+global_gbm,rounded,2023-03-01,region,Europe,0.29431930207659773,-0.11500471713113625,8842
+global_gbm,rounded,2023-03-01,region,India,0.31456722008170745,-0.1202849893753961,8881
+global_gbm,rounded,2023-03-01,region,Latin America,0.3429982641863653,-0.14147005286905906,8648
+global_gbm,rounded,2023-03-01,region,Middle East & Africa,0.40281661475293784,-0.12604859832932183,9006
+global_gbm,rounded,2023-03-01,region,North America,0.2821745684656926,-0.11995991120829606,8546
+global_gbm,rounded,2023-03-01,horizon,months 1-6,0.2928651519011734,-0.11079584032238665,16535
+global_gbm,rounded,2023-03-01,horizon,months 7-12,0.31457213031531706,-0.05613117952619601,16727
+global_gbm,rounded,2023-03-01,horizon,months 13-19,0.33064796816641395,-0.18658470807339636,19506
+blend_gbm_seasonal,rounded,2023-03-01,overall,all,0.3171131622242848,-0.08942233765819885,52768
+blend_gbm_seasonal,rounded,2023-03-01,family,Brake & Safety Systems,0.29865248916696385,-0.07482521260846543,7557
+blend_gbm_seasonal,rounded,2023-03-01,family,Chassis & Structural,0.314654486724924,-0.15492756475761899,7619
+blend_gbm_seasonal,rounded,2023-03-01,family,Electrical Assemblies,0.34607717775510294,-0.09310325527728625,7100
+blend_gbm_seasonal,rounded,2023-03-01,family,Hydraulic Systems,0.31049346684028556,-0.02279957032774598,7862
+blend_gbm_seasonal,rounded,2023-03-01,family,Powertrain Components,0.3035685105567733,-0.07915185187272143,7603
+blend_gbm_seasonal,rounded,2023-03-01,family,Precision Machined Parts,0.33418377726346926,-0.07139660285146031,8056
+blend_gbm_seasonal,rounded,2023-03-01,family,Thermal Management,0.32317853413964637,-0.12100714115624452,6971
+blend_gbm_seasonal,rounded,2023-03-01,region,Asia Pacific,0.2980203885329896,-0.0716189157683071,8845
+blend_gbm_seasonal,rounded,2023-03-01,region,Europe,0.29761599372462555,-0.08204840094554629,8842
+blend_gbm_seasonal,rounded,2023-03-01,region,India,0.3194551957492813,-0.09227945449402106,8881
+blend_gbm_seasonal,rounded,2023-03-01,region,Latin America,0.3466685539604612,-0.09183919263558095,8648
+blend_gbm_seasonal,rounded,2023-03-01,region,Middle East & Africa,0.411351408749823,-0.14603390910378025,9006
+blend_gbm_seasonal,rounded,2023-03-01,region,North America,0.2838145644899447,-0.08277838518371268,8546
+blend_gbm_seasonal,rounded,2023-03-01,horizon,months 1-6,0.2987831610911588,-0.08976724997510453,16535
+blend_gbm_seasonal,rounded,2023-03-01,horizon,months 7-12,0.3213771146283304,-0.006863305175844029,16727
+blend_gbm_seasonal,rounded,2023-03-01,horizon,months 13-19,0.32826350230508544,-0.1525396647703565,19506
+seasonal_naive,rounded,2024-03-01,overall,all,0.3569856722558423,-0.06992100605161815,54943
+seasonal_naive,rounded,2024-03-01,family,Brake & Safety Systems,0.351997128541105,0.014452184639757741,7874
+seasonal_naive,rounded,2024-03-01,family,Chassis & Structural,0.3429888152444076,-0.05337096106048053,7717
+seasonal_naive,rounded,2024-03-01,family,Electrical Assemblies,0.3826185437963818,-0.15432301135516943,7838
+seasonal_naive,rounded,2024-03-01,family,Hydraulic Systems,0.37082532033799515,-0.1612521155866136,8121
+seasonal_naive,rounded,2024-03-01,family,Powertrain Components,0.35809428952720945,-0.01069297290945665,7889
+seasonal_naive,rounded,2024-03-01,family,Precision Machined Parts,0.359386279546046,-0.09538691318073297,8158
+seasonal_naive,rounded,2024-03-01,family,Thermal Management,0.34508020593480654,-0.08254697707509122,7346
+seasonal_naive,rounded,2024-03-01,region,Asia Pacific,0.3442141004537365,-0.05164416206552352,9168
+seasonal_naive,rounded,2024-03-01,region,Europe,0.3260882319579766,-0.08824369198997133,9217
+seasonal_naive,rounded,2024-03-01,region,India,0.3652959366353822,-0.05732820318075024,9227
+seasonal_naive,rounded,2024-03-01,region,Latin America,0.3885203352376112,-0.07941474083518997,9187
+seasonal_naive,rounded,2024-03-01,region,Middle East & Africa,0.45005335269989005,-0.11649146153939782,9301
+seasonal_naive,rounded,2024-03-01,region,North America,0.3198491036311175,-0.05013672750941614,8843
+seasonal_naive,rounded,2024-03-01,horizon,months 1-6,0.3607801436712285,-0.07088701876345307,17382
+seasonal_naive,rounded,2024-03-01,horizon,months 7-12,0.34473442493615625,-0.11749083482502744,17332
+seasonal_naive,rounded,2024-03-01,horizon,months 13-19,0.3648235290401315,-0.025372142659336655,20229
+moving_avg_12,rounded,2024-03-01,overall,all,0.494055271844428,-0.0752520510919224,54943
+moving_avg_12,rounded,2024-03-01,family,Brake & Safety Systems,0.46869140274480114,0.001852421040037461,7874
+moving_avg_12,rounded,2024-03-01,family,Chassis & Structural,0.4631653893951947,-0.058380799502899754,7717
+moving_avg_12,rounded,2024-03-01,family,Electrical Assemblies,0.5163994277709891,-0.1540249754120347,7838
+moving_avg_12,rounded,2024-03-01,family,Hydraulic Systems,0.534193801759794,-0.15668899396259112,8121
+moving_avg_12,rounded,2024-03-01,family,Powertrain Components,0.49097028517392166,-0.01987516471710624,7889
+moving_avg_12,rounded,2024-03-01,family,Precision Machined Parts,0.5024926735989319,-0.09648219599678656,8158
+moving_avg_12,rounded,2024-03-01,family,Thermal Management,0.5006056906074692,-0.09215871016743019,7346
+moving_avg_12,rounded,2024-03-01,region,Asia Pacific,0.4864091646267759,-0.06708456587277965,9168
+moving_avg_12,rounded,2024-03-01,region,Europe,0.5129035033852629,-0.08832387441476608,9217
+moving_avg_12,rounded,2024-03-01,region,India,0.49350454243851954,-0.0570339983891766,9227
+moving_avg_12,rounded,2024-03-01,region,Latin America,0.4920546689596653,-0.09791452076177166,9187
+moving_avg_12,rounded,2024-03-01,region,Middle East & Africa,0.5368336491218105,-0.1133714443367022,9301
+moving_avg_12,rounded,2024-03-01,region,North America,0.4637741555240692,-0.04885279864740972,8843
+moving_avg_12,rounded,2024-03-01,horizon,months 1-6,0.49580744214153044,-0.0838242217418087,17382
+moving_avg_12,rounded,2024-03-01,horizon,months 7-12,0.49381286186243695,-0.10504660851257552,17332
+moving_avg_12,rounded,2024-03-01,horizon,months 13-19,0.49270245539921426,-0.04018624770059692,20229
+level_x_family_seasonal,rounded,2024-03-01,overall,all,0.4904785681823618,-0.059078025211089055,54943
+level_x_family_seasonal,rounded,2024-03-01,family,Brake & Safety Systems,0.4705520751035025,0.01708848095286228,7874
+level_x_family_seasonal,rounded,2024-03-01,family,Chassis & Structural,0.45861640430820216,-0.04327361226180613,7717
+level_x_family_seasonal,rounded,2024-03-01,family,Electrical Assemblies,0.5119512413197032,-0.13996512979465323,7838
+level_x_family_seasonal,rounded,2024-03-01,family,Hydraulic Systems,0.5282062630714421,-0.148887427415509,8121
+level_x_family_seasonal,rounded,2024-03-01,family,Powertrain Components,0.4896077844395142,-0.00021542619414656255,7889
+level_x_family_seasonal,rounded,2024-03-01,family,Precision Machined Parts,0.49378472261510087,-0.08493194084567601,8158
+level_x_family_seasonal,rounded,2024-03-01,family,Thermal Management,0.49756521989934,-0.06416474784523163,7346
+level_x_family_seasonal,rounded,2024-03-01,region,Asia Pacific,0.48875579825024956,-0.04308168269221035,9168
+level_x_family_seasonal,rounded,2024-03-01,region,Europe,0.4894609003117336,-0.07888777198465191,9217
+level_x_family_seasonal,rounded,2024-03-01,region,India,0.49587487324155255,-0.04489857237646529,9227
+level_x_family_seasonal,rounded,2024-03-01,region,Latin America,0.49469554997935394,-0.06768959211547275,9187
+level_x_family_seasonal,rounded,2024-03-01,region,Middle East & Africa,0.5484941555464493,-0.10579252088464051,9301
+level_x_family_seasonal,rounded,2024-03-01,region,North America,0.4560031115926671,-0.03775981203440215,8843
+level_x_family_seasonal,rounded,2024-03-01,horizon,months 1-6,0.48756637240687956,-0.04156019365401326,17382
+level_x_family_seasonal,rounded,2024-03-01,horizon,months 7-12,0.49405252674442207,-0.1427703196258017,17332
+level_x_family_seasonal,rounded,2024-03-01,horizon,months 13-19,0.4898152369740856,0.002020631713282995,20229
+series_seasonal_avg3,rounded,2024-03-01,overall,all,0.34485104169158276,-0.04398710144234219,54943
+series_seasonal_avg3,rounded,2024-03-01,family,Brake & Safety Systems,0.32290091610265464,-0.03169125215823554,7874
+series_seasonal_avg3,rounded,2024-03-01,family,Chassis & Structural,0.329424710024855,-0.09595329328914665,7717
+series_seasonal_avg3,rounded,2024-03-01,family,Electrical Assemblies,0.4045241856167854,-0.08932882305606056,7838
+series_seasonal_avg3,rounded,2024-03-01,family,Hydraulic Systems,0.3258985204140472,-0.04385770790411211,8121
+series_seasonal_avg3,rounded,2024-03-01,family,Powertrain Components,0.3469033184027127,0.024267620883471216,7889
+series_seasonal_avg3,rounded,2024-03-01,family,Precision Machined Parts,0.3498342366399258,-0.04225890765905928,8158
+series_seasonal_avg3,rounded,2024-03-01,family,Thermal Management,0.3538074384575079,-0.04139126171122018,7346
+series_seasonal_avg3,rounded,2024-03-01,region,Asia Pacific,0.3264533841939344,-0.01769390097975497,9168
+series_seasonal_avg3,rounded,2024-03-01,region,Europe,0.31672253360817,-0.04231089659596272,9217
+series_seasonal_avg3,rounded,2024-03-01,region,India,0.35265764995054855,-0.017222456380488173,9227
+series_seasonal_avg3,rounded,2024-03-01,region,Latin America,0.3825987721264537,-0.027708831523588693,9187
+series_seasonal_avg3,rounded,2024-03-01,region,Middle East & Africa,0.42874473066015345,-0.2541698279324713,9301
+series_seasonal_avg3,rounded,2024-03-01,region,North America,0.3099507463456646,-0.008348514254190132,8843
+series_seasonal_avg3,rounded,2024-03-01,horizon,months 1-6,0.34092990464858636,-0.028877120579369336,17382
+series_seasonal_avg3,rounded,2024-03-01,horizon,months 7-12,0.3228962526274266,-0.12309830503032507,17332
+series_seasonal_avg3,rounded,2024-03-01,horizon,months 13-19,0.3685362687071642,0.015069974507819814,20229
+series_seasonal_avg3_trend,rounded,2024-03-01,overall,all,0.342944587628866,-0.035052817111966894,54943
+series_seasonal_avg3_trend,rounded,2024-03-01,family,Brake & Safety Systems,0.32197883124196786,-0.01894090199289974,7874
+series_seasonal_avg3_trend,rounded,2024-03-01,family,Chassis & Structural,0.32827516570008286,-0.08329277133388567,7717
+series_seasonal_avg3_trend,rounded,2024-03-01,family,Electrical Assemblies,0.40093657795130094,-0.08212007868148899,7838
+series_seasonal_avg3_trend,rounded,2024-03-01,family,Hydraulic Systems,0.3246860516218718,-0.04101199066180848,8121
+series_seasonal_avg3_trend,rounded,2024-03-01,family,Powertrain Components,0.3463885337309858,0.03267204019796828,7889
+series_seasonal_avg3_trend,rounded,2024-03-01,family,Precision Machined Parts,0.34634019393747384,-0.037026895529480984,8158
+series_seasonal_avg3_trend,rounded,2024-03-01,family,Thermal Management,0.3510914448605229,-0.030166757199786565,7346
+series_seasonal_avg3_trend,rounded,2024-03-01,region,Asia Pacific,0.3262367407101452,-0.01773641979433042,9168
+series_seasonal_avg3_trend,rounded,2024-03-01,region,Europe,0.3152029788748646,-0.04196083186332221,9217
+series_seasonal_avg3_trend,rounded,2024-03-01,region,India,0.35065246693847574,-0.0167112494731439,9227
+series_seasonal_avg3_trend,rounded,2024-03-01,region,Latin America,0.3806339929485754,-0.028230655092771156,9187
+series_seasonal_avg3_trend,rounded,2024-03-01,region,Middle East & Africa,0.42115769272902104,-0.1551569543114256,9301
+series_seasonal_avg3_trend,rounded,2024-03-01,region,North America,0.30891884061422203,-0.009682053968669755,8843
+series_seasonal_avg3_trend,rounded,2024-03-01,horizon,months 1-6,0.33874110838113397,-0.020280034758412637,17382
+series_seasonal_avg3_trend,rounded,2024-03-01,horizon,months 7-12,0.32133212392394483,-0.11414470025262284,17332
+series_seasonal_avg3_trend,rounded,2024-03-01,horizon,months 13-19,0.3665693379930357,0.024289698990105326,20229
+"ablation 1: shipped units, no rules",rounded,2024-03-01,overall,all,0.3440553465926759,-0.04697366768722941,54943
+"ablation 1: shipped units, no rules",rounded,2024-03-01,family,Brake & Safety Systems,0.32428920046784976,-0.02035187748442048,7874
+"ablation 1: shipped units, no rules",rounded,2024-03-01,family,Chassis & Structural,0.3296111226180613,-0.08465461888980945,7717
+"ablation 1: shipped units, no rules",rounded,2024-03-01,family,Electrical Assemblies,0.38688418323249785,-0.1915067207105177,7838
+"ablation 1: shipped units, no rules",rounded,2024-03-01,family,Hydraulic Systems,0.32772501581819824,-0.040497704413199394,8121
+"ablation 1: shipped units, no rules",rounded,2024-03-01,family,Powertrain Components,0.3477622254365178,0.030039364240930417,7889
+"ablation 1: shipped units, no rules",rounded,2024-03-01,family,Precision Machined Parts,0.35098383100057706,-0.03660145509679901,8158
+"ablation 1: shipped units, no rules",rounded,2024-03-01,family,Thermal Management,0.3549130641695549,-0.03193575833906176,7346
+"ablation 1: shipped units, no rules",rounded,2024-03-01,region,Asia Pacific,0.32726124167086795,-0.030492064166965312,9168
+"ablation 1: shipped units, no rules",rounded,2024-03-01,region,Europe,0.31512670778786467,-0.05776850356127306,9217
+"ablation 1: shipped units, no rules",rounded,2024-03-01,region,India,0.35286839238990275,-0.025800299629844467,9227
+"ablation 1: shipped units, no rules",rounded,2024-03-01,region,Latin America,0.3813713523398115,-0.04211343083115151,9187
+"ablation 1: shipped units, no rules",rounded,2024-03-01,region,Middle East & Africa,0.4244724574294142,-0.15787936203965547,9301
+"ablation 1: shipped units, no rules",rounded,2024-03-01,region,North America,0.30951615527799936,-0.022316945876544387,8843
+"ablation 1: shipped units, no rules",rounded,2024-03-01,horizon,months 1-6,0.34117583681346864,-0.03331092618053295,17382
+"ablation 1: shipped units, no rules",rounded,2024-03-01,horizon,months 7-12,0.32387784659383456,-0.12318316245265472,17332
+"ablation 1: shipped units, no rules",rounded,2024-03-01,horizon,months 13-19,0.3651720590542517,0.010720193576307541,20229
+ablation 2: + unconstrained demand,rounded,2024-03-01,overall,all,0.34415214557370777,-0.03486632023345373,54943
+ablation 2: + unconstrained demand,rounded,2024-03-01,family,Brake & Safety Systems,0.32317527244822813,-0.018800629575614052,7874
+ablation 2: + unconstrained demand,rounded,2024-03-01,family,Chassis & Structural,0.32856514084507044,-0.08298208367854185,7717
+ablation 2: + unconstrained demand,rounded,2024-03-01,family,Electrical Assemblies,0.40329851280064377,-0.08191890441987304,7838
+ablation 2: + unconstrained demand,rounded,2024-03-01,family,Hydraulic Systems,0.3249260518712227,-0.04024211973207245,8121
+ablation 2: + unconstrained demand,rounded,2024-03-01,family,Powertrain Components,0.3463885337309858,0.03267204019796828,7889
+ablation 2: + unconstrained demand,rounded,2024-03-01,family,Precision Machined Parts,0.3491327125222055,-0.03671007818599441,8158
+ablation 2: + unconstrained demand,rounded,2024-03-01,family,Thermal Management,0.3525191441495575,-0.030479216640147674,7346
+ablation 2: + unconstrained demand,rounded,2024-03-01,region,Asia Pacific,0.3264533841939344,-0.01769390097975497,9168
+ablation 2: + unconstrained demand,rounded,2024-03-01,region,Europe,0.31672253360817,-0.04231089659596272,9217
+ablation 2: + unconstrained demand,rounded,2024-03-01,region,India,0.35265764995054855,-0.017222456380488173,9227
+ablation 2: + unconstrained demand,rounded,2024-03-01,region,Latin America,0.3825987721264537,-0.027708831523588693,9187
+ablation 2: + unconstrained demand,rounded,2024-03-01,region,Middle East & Africa,0.42115769272902104,-0.1551569543114256,9301
+ablation 2: + unconstrained demand,rounded,2024-03-01,region,North America,0.3099507463456646,-0.008348514254190132,8843
+ablation 2: + unconstrained demand,rounded,2024-03-01,horizon,months 1-6,0.3398782518673278,-0.020166437520347958,17382
+ablation 2: + unconstrained demand,rounded,2024-03-01,horizon,months 7-12,0.32237793431806167,-0.11389242142948061,17332
+ablation 2: + unconstrained demand,rounded,2024-03-01,horizon,months 13-19,0.36798872910794217,0.024481337849833053,20229
+ablation 3: + lost accounts,rounded,2024-03-01,overall,all,0.34415214557370777,-0.03486632023345373,54943
+ablation 3: + lost accounts,rounded,2024-03-01,family,Brake & Safety Systems,0.32317527244822813,-0.018800629575614052,7874
+ablation 3: + lost accounts,rounded,2024-03-01,family,Chassis & Structural,0.32856514084507044,-0.08298208367854185,7717
+ablation 3: + lost accounts,rounded,2024-03-01,family,Electrical Assemblies,0.40329851280064377,-0.08191890441987304,7838
+ablation 3: + lost accounts,rounded,2024-03-01,family,Hydraulic Systems,0.3249260518712227,-0.04024211973207245,8121
+ablation 3: + lost accounts,rounded,2024-03-01,family,Powertrain Components,0.3463885337309858,0.03267204019796828,7889
+ablation 3: + lost accounts,rounded,2024-03-01,family,Precision Machined Parts,0.3491327125222055,-0.03671007818599441,8158
+ablation 3: + lost accounts,rounded,2024-03-01,family,Thermal Management,0.3525191441495575,-0.030479216640147674,7346
+ablation 3: + lost accounts,rounded,2024-03-01,region,Asia Pacific,0.3264533841939344,-0.01769390097975497,9168
+ablation 3: + lost accounts,rounded,2024-03-01,region,Europe,0.31672253360817,-0.04231089659596272,9217
+ablation 3: + lost accounts,rounded,2024-03-01,region,India,0.35265764995054855,-0.017222456380488173,9227
+ablation 3: + lost accounts,rounded,2024-03-01,region,Latin America,0.3825987721264537,-0.027708831523588693,9187
+ablation 3: + lost accounts,rounded,2024-03-01,region,Middle East & Africa,0.42115769272902104,-0.1551569543114256,9301
+ablation 3: + lost accounts,rounded,2024-03-01,region,North America,0.3099507463456646,-0.008348514254190132,8843
+ablation 3: + lost accounts,rounded,2024-03-01,horizon,months 1-6,0.3398782518673278,-0.020166437520347958,17382
+ablation 3: + lost accounts,rounded,2024-03-01,horizon,months 7-12,0.32237793431806167,-0.11389242142948061,17332
+ablation 3: + lost accounts,rounded,2024-03-01,horizon,months 13-19,0.36798872910794217,0.024481337849833053,20229
+croston_sba,rounded,2024-03-01,overall,all,0.499368377305236,-0.14071955653359486,54943
+croston_sba,rounded,2024-03-01,family,Brake & Safety Systems,0.46975376002277364,-0.09350188026924053,7874
+croston_sba,rounded,2024-03-01,family,Chassis & Structural,0.46827361226180614,-0.1462821043910522,7717
+croston_sba,rounded,2024-03-01,family,Electrical Assemblies,0.5326647393675678,-0.2073734092331535,7838
+croston_sba,rounded,2024-03-01,family,Hydraulic Systems,0.5365938042533032,-0.17577057222916595,8121
+croston_sba,rounded,2024-03-01,family,Powertrain Components,0.49140393530499593,-0.09160649188234932,7889
+croston_sba,rounded,2024-03-01,family,Precision Machined Parts,0.5060183980357325,-0.14624062277237806,8158
+croston_sba,rounded,2024-03-01,family,Thermal Management,0.5123325337576372,-0.15686906026621544,7346
+croston_sba,rounded,2024-03-01,region,Asia Pacific,0.49053146493513855,-0.1367668288455737,9168
+croston_sba,rounded,2024-03-01,region,Europe,0.5191107964657151,-0.13419604407295427,9217
+croston_sba,rounded,2024-03-01,region,India,0.4957872377717221,-0.10824649771104498,9227
+croston_sba,rounded,2024-03-01,region,Latin America,0.5016471474401151,-0.16130474042680631,9187
+croston_sba,rounded,2024-03-01,region,Middle East & Africa,0.544355771220377,-0.2693236175970593,9301
+croston_sba,rounded,2024-03-01,region,North America,0.46740566992510746,-0.10119026357253702,8843
+croston_sba,rounded,2024-03-01,horizon,months 1-6,0.5003688982473234,-0.14855708085546918,17382
+croston_sba,rounded,2024-03-01,horizon,months 7-12,0.5001358865479197,-0.16846950465053076,17332
+croston_sba,rounded,2024-03-01,horizon,months 13-19,0.49776403780971523,-0.10819171888474607,20229
+global_gbm,rounded,2024-03-01,overall,all,0.29230825579448416,-0.07786898725093884,54943
+global_gbm,rounded,2024-03-01,family,Brake & Safety Systems,0.28362876492199407,0.006380332156832814,7874
+global_gbm,rounded,2024-03-01,family,Chassis & Structural,0.27799295774647886,-0.07148405136702568,7717
+global_gbm,rounded,2024-03-01,family,Electrical Assemblies,0.32278782821208235,-0.13542753256042678,7838
+global_gbm,rounded,2024-03-01,family,Hydraulic Systems,0.3068855136472869,-0.14056222396075216,8121
+global_gbm,rounded,2024-03-01,family,Powertrain Components,0.28738413847707667,-0.02052424104232705,7889
+global_gbm,rounded,2024-03-01,family,Precision Machined Parts,0.28869754127111646,-0.09088131796014891,8158
+global_gbm,rounded,2024-03-01,family,Thermal Management,0.2928706369846222,-0.1319251827887726,7346
+global_gbm,rounded,2024-03-01,region,Asia Pacific,0.27930001882976074,-0.09384509788438528,9168
+global_gbm,rounded,2024-03-01,region,Europe,0.2693816566080096,-0.10506635584568991,9217
+global_gbm,rounded,2024-03-01,region,India,0.30067521042945555,-0.06090039185574367,9227
+global_gbm,rounded,2024-03-01,region,Latin America,0.31559208824717194,-0.11680907156243052,9187
+global_gbm,rounded,2024-03-01,region,Middle East & Africa,0.37468201385141575,0.03254311831316209,9301
+global_gbm,rounded,2024-03-01,region,North America,0.2597088438290053,-0.07069546477431031,8843
+global_gbm,rounded,2024-03-01,horizon,months 1-6,0.2896905236481343,-0.05912560575434422,17382
+global_gbm,rounded,2024-03-01,horizon,months 7-12,0.29336586965670586,-0.1367213614800052,17332
+global_gbm,rounded,2024-03-01,horizon,months 13-19,0.2936907643758101,-0.040681139261432256,20229
+blend_gbm_seasonal,rounded,2024-03-01,overall,all,0.30376604097399956,-0.056574332647642736,54943
+blend_gbm_seasonal,rounded,2024-03-01,family,Brake & Safety Systems,0.29348702789564557,-0.00629988179986014,7874
+blend_gbm_seasonal,rounded,2024-03-01,family,Chassis & Structural,0.29138359569179784,-0.07714892294946148,7717
+blend_gbm_seasonal,rounded,2024-03-01,family,Electrical Assemblies,0.3442240634220487,-0.1089395881143266,7838
+blend_gbm_seasonal,rounded,2024-03-01,family,Hydraulic Systems,0.29829537485233754,-0.0910598348673609,8121
+blend_gbm_seasonal,rounded,2024-03-01,family,Powertrain Components,0.3050127157409402,0.00571019301627447,7889
+blend_gbm_seasonal,rounded,2024-03-01,family,Precision Machined Parts,0.303221353488951,-0.06424603129702758,8158
+blend_gbm_seasonal,rounded,2024-03-01,family,Thermal Management,0.30486186889201883,-0.08103515409057478,7346
+blend_gbm_seasonal,rounded,2024-03-01,region,Asia Pacific,0.2905877517468146,-0.05575431414115031,9168
+blend_gbm_seasonal,rounded,2024-03-01,region,Europe,0.27959024825260986,-0.07362311131276231,9217
+blend_gbm_seasonal,rounded,2024-03-01,region,India,0.3152039193920602,-0.03895187978082786,9227
+blend_gbm_seasonal,rounded,2024-03-01,region,Latin America,0.33412136254940306,-0.07263330323394485,9187
+blend_gbm_seasonal,rounded,2024-03-01,region,Middle East & Africa,0.36796322518085145,-0.06194187598641636,9301
+blend_gbm_seasonal,rounded,2024-03-01,region,North America,0.2723854088529574,-0.04016693059640183,8843
+blend_gbm_seasonal,rounded,2024-03-01,horizon,months 1-6,0.29897270621412025,-0.03974849337271371,17382
+blend_gbm_seasonal,rounded,2024-03-01,horizon,months 7-12,0.2965342623309875,-0.12567040230445237,17332
+blend_gbm_seasonal,rounded,2024-03-01,horizon,months 13-19,0.31471628498593773,-0.008256265379808213,20229
+seasonal_naive,rounded,2025-03-01,overall,all,0.36499467428661087,0.0492658662506676,56525
+seasonal_naive,rounded,2025-03-01,family,Brake & Safety Systems,0.33821591628015685,-0.04920192939261205,7871
+seasonal_naive,rounded,2025-03-01,family,Chassis & Structural,0.35042255339967365,-0.0024064310566194237,8116
+seasonal_naive,rounded,2025-03-01,family,Electrical Assemblies,0.4002343622189841,0.10419987749247644,8103
+seasonal_naive,rounded,2025-03-01,family,Hydraulic Systems,0.40801904580765963,0.13977091251323992,8459
+seasonal_naive,rounded,2025-03-01,family,Powertrain Components,0.3642896456342878,0.0807744958297464,8175
+seasonal_naive,rounded,2025-03-01,family,Precision Machined Parts,0.36573998599909857,0.10324226354299523,8227
+seasonal_naive,rounded,2025-03-01,family,Thermal Management,0.35704222283548054,0.03465070903958905,7574
+seasonal_naive,rounded,2025-03-01,region,Asia Pacific,0.3434454557932669,0.055475316874501926,9446
+seasonal_naive,rounded,2025-03-01,region,Europe,0.3297511751776964,0.05608970207576534,9462
+seasonal_naive,rounded,2025-03-01,region,India,0.3761091496917786,0.03947272610009966,9528
+seasonal_naive,rounded,2025-03-01,region,Latin America,0.40114512922465206,0.04199715989775632,9407
+seasonal_naive,rounded,2025-03-01,region,Middle East & Africa,0.4606989251767202,0.04995400717653786,9547
+seasonal_naive,rounded,2025-03-01,region,North America,0.3326522354034704,0.05183956537939158,9135
+seasonal_naive,rounded,2025-03-01,horizon,months 1-6,0.3597242186254329,0.038981512673547214,17860
+seasonal_naive,rounded,2025-03-01,horizon,months 7-12,0.38806569686076947,0.1446520556340195,17844
+seasonal_naive,rounded,2025-03-01,horizon,months 13-19,0.35199677056601597,-0.013698182482242919,20821
+moving_avg_12,rounded,2025-03-01,overall,all,0.5049613621756671,0.048418730820642644,56525
+moving_avg_12,rounded,2025-03-01,family,Brake & Safety Systems,0.46855065864499257,-0.0354245832342713,7871
+moving_avg_12,rounded,2025-03-01,family,Chassis & Structural,0.477516384343546,-0.00724164392270613,8116
+moving_avg_12,rounded,2025-03-01,family,Electrical Assemblies,0.5241191442735342,0.099923527912312,8103
+moving_avg_12,rounded,2025-03-01,family,Hydraulic Systems,0.5577391629420001,0.14089569075484754,8459
+moving_avg_12,rounded,2025-03-01,family,Powertrain Components,0.5017259628275872,0.07451699854640907,8175
+moving_avg_12,rounded,2025-03-01,family,Precision Machined Parts,0.5201646544366555,0.10268366593465607,8227
+moving_avg_12,rounded,2025-03-01,family,Thermal Management,0.511733406924332,0.02519523401453422,7574
+moving_avg_12,rounded,2025-03-01,region,Asia Pacific,0.4921567542873064,0.04618675057925499,9446
+moving_avg_12,rounded,2025-03-01,region,Europe,0.5259017334244648,0.06342671653657847,9462
+moving_avg_12,rounded,2025-03-01,region,India,0.507411668514816,0.04178620691089978,9528
+moving_avg_12,rounded,2025-03-01,region,Latin America,0.5007213859698949,0.02671513774495882,9407
+moving_avg_12,rounded,2025-03-01,region,Middle East & Africa,0.5366740973390458,0.05575490382942049,9547
+moving_avg_12,rounded,2025-03-01,region,North America,0.48247775413967314,0.05748867173884301,9135
+moving_avg_12,rounded,2025-03-01,horizon,months 1-6,0.500055746104666,0.05288567013411434,17860
+moving_avg_12,rounded,2025-03-01,horizon,months 7-12,0.5260757107782866,0.12992987167817446,17844
+moving_avg_12,rounded,2025-03-01,horizon,months 13-19,0.49313168593754503,-0.01601357131186144,20821
+level_x_family_seasonal,rounded,2025-03-01,overall,all,0.4971772210337014,0.05225233924039938,56525
+level_x_family_seasonal,rounded,2025-03-01,family,Brake & Safety Systems,0.46357606553809827,-0.039677870414771055,7871
+level_x_family_seasonal,rounded,2025-03-01,family,Chassis & Structural,0.4697631565223222,-0.007991635851600934,8116
+level_x_family_seasonal,rounded,2025-03-01,family,Electrical Assemblies,0.5174687358517126,0.10746420839975498,8103
+level_x_family_seasonal,rounded,2025-03-01,family,Hydraulic Systems,0.5541221646898333,0.14613919048758972,8459
+level_x_family_seasonal,rounded,2025-03-01,family,Powertrain Components,0.49280401924949546,0.08247364484398595,8175
+level_x_family_seasonal,rounded,2025-03-01,family,Precision Machined Parts,0.5101434612913435,0.10456803383231524,8227
+level_x_family_seasonal,rounded,2025-03-01,family,Thermal Management,0.49998063394772135,0.03824553249381497,7574
+level_x_family_seasonal,rounded,2025-03-01,region,Asia Pacific,0.48624845583219123,0.059416914040813146,9446
+level_x_family_seasonal,rounded,2025-03-01,region,Europe,0.4994071803905237,0.060589153094916894,9462
+level_x_family_seasonal,rounded,2025-03-01,region,India,0.5045947143620972,0.04201089749324368,9528
+level_x_family_seasonal,rounded,2025-03-01,region,Latin America,0.4992081794944618,0.048504402158477705,9407
+level_x_family_seasonal,rounded,2025-03-01,region,Middle East & Africa,0.5457525006008072,0.03815746948314011,9547
+level_x_family_seasonal,rounded,2025-03-01,region,North America,0.47320480614750976,0.05684563516388418,9135
+level_x_family_seasonal,rounded,2025-03-01,horizon,months 1-6,0.4939212769094839,0.05358699209604155,17860
+level_x_family_seasonal,rounded,2025-03-01,horizon,months 7-12,0.5176878639507981,0.1299543335491986,17844
+level_x_family_seasonal,rounded,2025-03-01,horizon,months 13-19,0.4844756494910758,-0.0068250627144546,20821
+series_seasonal_avg3,rounded,2025-03-01,overall,all,0.31623837168953356,-0.019081668985036708,56525
+series_seasonal_avg3,rounded,2025-03-01,family,Brake & Safety Systems,0.3034260016682718,-0.05923372326836207,7871
+series_seasonal_avg3,rounded,2025-03-01,family,Chassis & Structural,0.31118456506676667,-0.08052479567686771,8116
+series_seasonal_avg3,rounded,2025-03-01,family,Electrical Assemblies,0.3402855718856647,-0.023173705776496058,8103
+series_seasonal_avg3,rounded,2025-03-01,family,Hydraulic Systems,0.32424438184745646,0.02918520801838996,8459
+series_seasonal_avg3,rounded,2025-03-01,family,Powertrain Components,0.3155534229949618,0.04191704652902242,8175
+series_seasonal_avg3,rounded,2025-03-01,family,Precision Machined Parts,0.3203641193337105,0.025084149253445084,8227
+series_seasonal_avg3,rounded,2025-03-01,family,Thermal Management,0.3117692341210475,-0.04088657787331697,7574
+series_seasonal_avg3,rounded,2025-03-01,region,Asia Pacific,0.2998072223007537,-0.002892689812282459,9446
+series_seasonal_avg3,rounded,2025-03-01,region,Europe,0.28561550616831294,-0.01770488144604146,9462
+series_seasonal_avg3,rounded,2025-03-01,region,India,0.3258242295505564,-0.01965002361331583,9528
+series_seasonal_avg3,rounded,2025-03-01,region,Latin America,0.34574041465492755,-0.013284862255041182,9407
+series_seasonal_avg3,rounded,2025-03-01,region,Middle East & Africa,0.3806755558502043,-0.1069312428006729,9547
+series_seasonal_avg3,rounded,2025-03-01,region,North America,0.29669627439432367,0.0016125995104107821,9135
+series_seasonal_avg3,rounded,2025-03-01,horizon,months 1-6,0.3165155927249535,-0.019174262323185944,17860
+series_seasonal_avg3,rounded,2025-03-01,horizon,months 7-12,0.31028724673916824,0.056597044748486904,17844
+series_seasonal_avg3,rounded,2025-03-01,horizon,months 13-19,0.32045884874523034,-0.07550435877473737,20821
+series_seasonal_avg3_trend,rounded,2025-03-01,overall,all,0.3175196357393086,0.002430516790329832,56525
+series_seasonal_avg3_trend,rounded,2025-03-01,family,Brake & Safety Systems,0.3014716252755268,-0.05690056052320872,7871
+series_seasonal_avg3_trend,rounded,2025-03-01,family,Chassis & Structural,0.31268951575852244,-0.03949378028216584,8116
+series_seasonal_avg3_trend,rounded,2025-03-01,family,Electrical Assemblies,0.3452619644575998,0.0111892741239,8103
+series_seasonal_avg3_trend,rounded,2025-03-01,family,Hydraulic Systems,0.3279105686524632,0.044374633135376734,8459
+series_seasonal_avg3_trend,rounded,2025-03-01,family,Powertrain Components,0.31573124091505667,0.046046373784558066,8175
+series_seasonal_avg3_trend,rounded,2025-03-01,family,Precision Machined Parts,0.31731221051218367,0.03621534537155132,8227
+series_seasonal_avg3_trend,rounded,2025-03-01,family,Thermal Management,0.3179300595021956,0.006523938861372956,7574
+series_seasonal_avg3_trend,rounded,2025-03-01,region,Asia Pacific,0.2961258033257738,0.007803297092764793,9446
+series_seasonal_avg3_trend,rounded,2025-03-01,region,Europe,0.2865640175434751,0.0008389144725698879,9462
+series_seasonal_avg3_trend,rounded,2025-03-01,region,India,0.32882842585522853,0.008099263306155482,9528
+series_seasonal_avg3_trend,rounded,2025-03-01,region,Latin America,0.34640613462084635,0.0016813405282590174,9407
+series_seasonal_avg3_trend,rounded,2025-03-01,region,Middle East & Africa,0.39244723255794683,-0.03582468032915945,9547
+series_seasonal_avg3_trend,rounded,2025-03-01,region,North America,0.29697672648309076,0.012474108262519181,9135
+series_seasonal_avg3_trend,rounded,2025-03-01,horizon,months 1-6,0.3168021157145272,0.0020727960208070835,17860
+series_seasonal_avg3_trend,rounded,2025-03-01,horizon,months 7-12,0.3158581159981924,0.08007915346476653,17844
+series_seasonal_avg3_trend,rounded,2025-03-01,horizon,months 13-19,0.319335274838288,-0.05525023307670867,20821
+"ablation 1: shipped units, no rules",rounded,2025-03-01,overall,all,0.321595013442523,0.005761350709541928,56525
+"ablation 1: shipped units, no rules",rounded,2025-03-01,family,Brake & Safety Systems,0.3046167608931299,-0.05984018439642007,7871
+"ablation 1: shipped units, no rules",rounded,2025-03-01,family,Chassis & Structural,0.3149792262169364,-0.04047721340747161,8116
+"ablation 1: shipped units, no rules",rounded,2025-03-01,family,Electrical Assemblies,0.35919053724495037,0.06098744107654437,8103
+"ablation 1: shipped units, no rules",rounded,2025-03-01,family,Hydraulic Systems,0.33155380079947794,0.045256747849640434,8459
+"ablation 1: shipped units, no rules",rounded,2025-03-01,family,Powertrain Components,0.31734571472925105,0.0445504452504269,8175
+"ablation 1: shipped units, no rules",rounded,2025-03-01,family,Precision Machined Parts,0.32353829630126874,0.03310589859895089,8227
+"ablation 1: shipped units, no rules",rounded,2025-03-01,family,Thermal Management,0.31885236774196674,0.004478399589439692,7574
+"ablation 1: shipped units, no rules",rounded,2025-03-01,region,Asia Pacific,0.30429171096866187,0.014240146519246016,9446
+"ablation 1: shipped units, no rules",rounded,2025-03-01,region,Europe,0.2903042609283057,0.00800655190210406,9462
+"ablation 1: shipped units, no rules",rounded,2025-03-01,region,India,0.3309276184254599,0.002350929241190777,9528
+"ablation 1: shipped units, no rules",rounded,2025-03-01,region,Latin America,0.35003692132916786,0.0062300482817381425,9407
+"ablation 1: shipped units, no rules",rounded,2025-03-01,region,Middle East & Africa,0.3973448467320234,-0.03335515575407513,9547
+"ablation 1: shipped units, no rules",rounded,2025-03-01,region,North America,0.2992864497570083,0.01699539657928581,9135
+"ablation 1: shipped units, no rules",rounded,2025-03-01,horizon,months 1-6,0.32085060163833606,0.0027069828889429697,17860
+"ablation 1: shipped units, no rules",rounded,2025-03-01,horizon,months 7-12,0.3217778887860346,0.08873350593972852,17844
+"ablation 1: shipped units, no rules",rounded,2025-03-01,horizon,months 13-19,0.32205530405697647,-0.053731630191363185,20821
+ablation 2: + unconstrained demand,rounded,2025-03-01,overall,all,0.3189295165217811,0.0014491070000694003,56525
+ablation 2: + unconstrained demand,rounded,2025-03-01,family,Brake & Safety Systems,0.3034260016682718,-0.05923372326836207,7871
+ablation 2: + unconstrained demand,rounded,2025-03-01,family,Chassis & Structural,0.3129924926304601,-0.04002523151654825,8116
+ablation 2: + unconstrained demand,rounded,2025-03-01,family,Electrical Assemblies,0.3466582458596642,0.010432162409974091,8103
+ablation 2: + unconstrained demand,rounded,2025-03-01,family,Hydraulic Systems,0.32860248762907895,0.044614017425864655,8459
+ablation 2: + unconstrained demand,rounded,2025-03-01,family,Powertrain Components,0.31609252176858266,0.04610846893125785,8175
+ablation 2: + unconstrained demand,rounded,2025-03-01,family,Precision Machined Parts,0.32194161815897737,0.03473614054603515,8227
+ablation 2: + unconstrained demand,rounded,2025-03-01,family,Thermal Management,0.3179518463110091,0.005291773785143333,7574
+ablation 2: + unconstrained demand,rounded,2025-03-01,region,Asia Pacific,0.3005611244614619,0.005236342181440486,9446
+ablation 2: + unconstrained demand,rounded,2025-03-01,region,Europe,0.2869605590637635,0.00025107654048409946,9462
+ablation 2: + unconstrained demand,rounded,2025-03-01,region,India,0.3301120748302858,0.006961247115950743,9528
+ablation 2: + unconstrained demand,rounded,2025-03-01,region,Latin America,0.3468105651803465,-6.816245384833854e-05,9407
+ablation 2: + unconstrained demand,rounded,2025-03-01,region,Middle East & Africa,0.39244723255794683,-0.03582468032915945,9547
+ablation 2: + unconstrained demand,rounded,2025-03-01,region,North America,0.2981365961930632,0.01300095754356022,9135
+ablation 2: + unconstrained demand,rounded,2025-03-01,horizon,months 1-6,0.3185632130855888,0.0010957406379512287,17860
+ablation 2: + unconstrained demand,rounded,2025-03-01,horizon,months 7-12,0.3168082665674459,0.07922942531340163,17844
+ablation 2: + unconstrained demand,rounded,2025-03-01,horizon,months 13-19,0.32080678181136646,-0.056333439058850666,20821
+ablation 3: + lost accounts,rounded,2025-03-01,overall,all,0.3189295165217811,0.0014491070000694003,56525
+ablation 3: + lost accounts,rounded,2025-03-01,family,Brake & Safety Systems,0.3034260016682718,-0.05923372326836207,7871
+ablation 3: + lost accounts,rounded,2025-03-01,family,Chassis & Structural,0.3129924926304601,-0.04002523151654825,8116
+ablation 3: + lost accounts,rounded,2025-03-01,family,Electrical Assemblies,0.3466582458596642,0.010432162409974091,8103
+ablation 3: + lost accounts,rounded,2025-03-01,family,Hydraulic Systems,0.32860248762907895,0.044614017425864655,8459
+ablation 3: + lost accounts,rounded,2025-03-01,family,Powertrain Components,0.31609252176858266,0.04610846893125785,8175
+ablation 3: + lost accounts,rounded,2025-03-01,family,Precision Machined Parts,0.32194161815897737,0.03473614054603515,8227
+ablation 3: + lost accounts,rounded,2025-03-01,family,Thermal Management,0.3179518463110091,0.005291773785143333,7574
+ablation 3: + lost accounts,rounded,2025-03-01,region,Asia Pacific,0.3005611244614619,0.005236342181440486,9446
+ablation 3: + lost accounts,rounded,2025-03-01,region,Europe,0.2869605590637635,0.00025107654048409946,9462
+ablation 3: + lost accounts,rounded,2025-03-01,region,India,0.3301120748302858,0.006961247115950743,9528
+ablation 3: + lost accounts,rounded,2025-03-01,region,Latin America,0.3468105651803465,-6.816245384833854e-05,9407
+ablation 3: + lost accounts,rounded,2025-03-01,region,Middle East & Africa,0.39244723255794683,-0.03582468032915945,9547
+ablation 3: + lost accounts,rounded,2025-03-01,region,North America,0.2981365961930632,0.01300095754356022,9135
+ablation 3: + lost accounts,rounded,2025-03-01,horizon,months 1-6,0.3185632130855888,0.0010957406379512287,17860
+ablation 3: + lost accounts,rounded,2025-03-01,horizon,months 7-12,0.3168082665674459,0.07922942531340163,17844
+ablation 3: + lost accounts,rounded,2025-03-01,horizon,months 13-19,0.32080678181136646,-0.056333439058850666,20821
+croston_sba,rounded,2025-03-01,overall,all,0.4917968172450522,-0.04861750213481146,56525
+croston_sba,rounded,2025-03-01,family,Brake & Safety Systems,0.4674304181559552,-0.08485620222355648,7871
+croston_sba,rounded,2025-03-01,family,Chassis & Structural,0.4731406036193319,-0.09858172056095423,8116
+croston_sba,rounded,2025-03-01,family,Electrical Assemblies,0.49891759656978935,-0.03392164844906236,8103
+croston_sba,rounded,2025-03-01,family,Hydraulic Systems,0.5283768761333862,0.005751781445422021,8459
+croston_sba,rounded,2025-03-01,family,Powertrain Components,0.48667635727289404,-0.01925796299693758,8175
+croston_sba,rounded,2025-03-01,family,Precision Machined Parts,0.49918487902645786,-0.007978595882200635,8227
+croston_sba,rounded,2025-03-01,family,Thermal Management,0.5046551148164824,-0.07207560506809588,7574
+croston_sba,rounded,2025-03-01,region,Asia Pacific,0.4801189034820856,-0.052029492324743354,9446
+croston_sba,rounded,2025-03-01,region,Europe,0.5132761702458358,-0.03143239166346179,9462
+croston_sba,rounded,2025-03-01,region,India,0.49495382400486,-0.03976815260651478,9528
+croston_sba,rounded,2025-03-01,region,Latin America,0.4907651235444476,-0.07638284578244817,9407
+croston_sba,rounded,2025-03-01,region,Middle East & Africa,0.5116970937507769,-0.09244971865651233,9547
+croston_sba,rounded,2025-03-01,region,North America,0.46987143274959237,-0.025406956013093104,9135
+croston_sba,rounded,2025-03-01,horizon,months 1-6,0.486224717942693,-0.04454773125342419,17860
+croston_sba,rounded,2025-03-01,horizon,months 7-12,0.4986475160257442,0.025302586907234147,17844
+croston_sba,rounded,2025-03-01,horizon,months 13-19,0.49114981305806255,-0.10706438684005652,20821
+global_gbm,rounded,2025-03-01,overall,all,0.2935603374661674,0.0726925931848973,56525
+global_gbm,rounded,2025-03-01,family,Brake & Safety Systems,0.2639778208501739,-0.002204214199652645,7871
+global_gbm,rounded,2025-03-01,family,Chassis & Structural,0.28086949395412136,0.01989713686856019,8116
+global_gbm,rounded,2025-03-01,family,Electrical Assemblies,0.32474385655206,0.12850354396764585,8103
+global_gbm,rounded,2025-03-01,family,Hydraulic Systems,0.3433197026388019,0.1871952359246956,8459
+global_gbm,rounded,2025-03-01,family,Powertrain Components,0.29738212506527045,0.10602746298988132,8175
+global_gbm,rounded,2025-03-01,family,Precision Machined Parts,0.29722906817288236,0.10440980446686293,8227
+global_gbm,rounded,2025-03-01,family,Thermal Management,0.2779173747379531,0.033488745902869564,7574
+global_gbm,rounded,2025-03-01,region,Asia Pacific,0.278241113480713,0.07687548527329978,9446
+global_gbm,rounded,2025-03-01,region,Europe,0.27458607242561855,0.08713153023180742,9462
+global_gbm,rounded,2025-03-01,region,India,0.3003384922013644,0.07275605884396695,9528
+global_gbm,rounded,2025-03-01,region,Latin America,0.316226072138597,0.04196307867083215,9407
+global_gbm,rounded,2025-03-01,region,Middle East & Africa,0.35272766447613757,0.0729918538837003,9547
+global_gbm,rounded,2025-03-01,region,North America,0.27249926882134,0.08097453094388153,9135
+global_gbm,rounded,2025-03-01,horizon,months 1-6,0.28300439135443856,0.07061053373598405,17860
+global_gbm,rounded,2025-03-01,horizon,months 7-12,0.3164658003731079,0.15143314377529069,17844
+global_gbm,rounded,2025-03-01,horizon,months 13-19,0.28492354122814606,0.015579135549724633,20821
+blend_gbm_seasonal,rounded,2025-03-01,overall,all,0.2930718956220524,0.037533455437508106,56525
+blend_gbm_seasonal,rounded,2025-03-01,family,Brake & Safety Systems,0.2732480123790604,-0.029559439235012752,7871
+blend_gbm_seasonal,rounded,2025-03-01,family,Chassis & Structural,0.2854042133652535,-0.009759828743564845,8116
+blend_gbm_seasonal,rounded,2025-03-01,family,Electrical Assemblies,0.31487477220068405,0.06979885177731024,8103
+blend_gbm_seasonal,rounded,2025-03-01,family,Hydraulic Systems,0.32103072972857755,0.11594725675440812,8459
+blend_gbm_seasonal,rounded,2025-03-01,family,Powertrain Components,0.2934673083165159,0.07581817412043636,8175
+blend_gbm_seasonal,rounded,2025-03-01,family,Precision Machined Parts,0.2957714400790188,0.07029938913875276,8227
+blend_gbm_seasonal,rounded,2025-03-01,family,Thermal Management,0.2867870266815785,0.019908301742460555,7574
+blend_gbm_seasonal,rounded,2025-03-01,region,Asia Pacific,0.2767517469838792,0.042378315479373194,9446
+blend_gbm_seasonal,rounded,2025-03-01,region,Europe,0.2675997680531007,0.04399418937149165,9462
+blend_gbm_seasonal,rounded,2025-03-01,region,India,0.3029182729616091,0.04047967278393712,9528
+blend_gbm_seasonal,rounded,2025-03-01,region,Latin America,0.3189162169838114,0.021646123260437376,9407
+blend_gbm_seasonal,rounded,2025-03-01,region,Middle East & Africa,0.35417788863935823,0.018479999337040382,9547
+blend_gbm_seasonal,rounded,2025-03-01,region,North America,0.2728277984110386,0.046683253404488034,9135
+blend_gbm_seasonal,rounded,2025-03-01,horizon,months 1-6,0.28643307650163824,0.03623736571482691,17860
+blend_gbm_seasonal,rounded,2025-03-01,horizon,months 7-12,0.3042760638017095,0.11569306274212424,17844
+blend_gbm_seasonal,rounded,2025-03-01,horizon,months 13-19,0.2900300837153869,-0.019776438587891545,20821

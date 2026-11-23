@@ -1,0 +1,379 @@
+{
+  "files": {
+    "train": [
+      248248,
+      245548
+    ],
+    "test": [
+      58219,
+      58219
+    ],
+    "macro_indicators": [
+      114,
+      113
+    ],
+    "sku_master": [
+      601,
+      601
+    ],
+    "events_calendar": [
+      68,
+      68
+    ],
+    "inventory_stockouts": [
+      5830,
+      5830
+    ]
+  },
+  "history_row_status": {
+    "observed": 204388,
+    "true_zero": 36059,
+    "repaired": 3814,
+    "missing_row": 956,
+    "units_unknown": 331
+  },
+  "issues": [
+    {
+      "file": "inventory_stockouts",
+      "issue": "Region inconsistent spelling",
+      "rows_affected": 0,
+      "action": "mapped to standard label"
+    },
+    {
+      "file": "inventory_stockouts",
+      "issue": "Region missing",
+      "rows_affected": 0,
+      "action": "left blank for recovery step"
+    },
+    {
+      "file": "inventory_stockouts",
+      "issue": "Lost_Units formula violated",
+      "rows_affected": 0,
+      "action": "none expected; kept as is"
+    },
+    {
+      "file": "inventory_stockouts",
+      "issue": "Duplicate Date-SKU-Region keys",
+      "rows_affected": 0,
+      "action": "none expected"
+    },
+    {
+      "file": "inventory_stockouts",
+      "issue": "Fill_Rate_Pct differs by >1 point from Shipped/(Requested+Carried_In)",
+      "rows_affected": 2945,
+      "action": "file's rates come from unrounded units; recomputed from integer columns, original kept"
+    },
+    {
+      "file": "inventory_stockouts",
+      "issue": "Row with zero requested and zero carried-in units",
+      "rows_affected": 825,
+      "action": "kept, flagged Zero_Demand (no demand was lost)"
+    },
+    {
+      "file": "train",
+      "issue": "SKU_ID inconsistent format",
+      "rows_affected": 3741,
+      "action": "uppercased / stripped / zero-padded"
+    },
+    {
+      "file": "train",
+      "issue": "Region inconsistent spelling",
+      "rows_affected": 5992,
+      "action": "mapped to standard label"
+    },
+    {
+      "file": "train",
+      "issue": "Region missing",
+      "rows_affected": 952,
+      "action": "left blank for recovery step"
+    },
+    {
+      "file": "train",
+      "issue": "Sales_Channel inconsistent spelling",
+      "rows_affected": 3745,
+      "action": "mapped to standard label"
+    },
+    {
+      "file": "train",
+      "issue": "Sales_Channel missing",
+      "rows_affected": 0,
+      "action": "left blank for recovery step"
+    },
+    {
+      "file": "train",
+      "issue": "Customer_Name spelling variants",
+      "rows_affected": 2490,
+      "action": "grouped under one canonical name"
+    },
+    {
+      "file": "train",
+      "issue": "Date unparseable",
+      "rows_affected": 0,
+      "action": "kept as missing, review"
+    },
+    {
+      "file": "train",
+      "issue": "Year/Month disagree with Date",
+      "rows_affected": 276,
+      "action": "Year/Month rebuilt from Date"
+    },
+    {
+      "file": "train",
+      "issue": "Date impossible (e.g. year 2062)",
+      "rows_affected": 30,
+      "action": "rebuilt from Load_Timestamp (load month minus 1)"
+    },
+    {
+      "file": "train",
+      "issue": "Duplicate Record_ID (double load)",
+      "rows_affected": 3682,
+      "action": "kept latest Load_Timestamp"
+    },
+    {
+      "file": "train",
+      "issue": "Product_Family missing",
+      "rows_affected": 1228,
+      "action": "filled from sku_master"
+    },
+    {
+      "file": "train",
+      "issue": "SKU_Description missing",
+      "rows_affected": 982,
+      "action": "filled from sku_master"
+    },
+    {
+      "file": "sku_master",
+      "issue": "SKU has a Business_Unit that contradicts its family",
+      "rows_affected": 1,
+      "action": "SKU(s) PMP-004: majority BU of the family used"
+    },
+    {
+      "file": "train",
+      "issue": "train Business_Unit disagrees with its family",
+      "rows_affected": 0,
+      "action": "set from family -> BU mapping"
+    },
+    {
+      "file": "train",
+      "issue": "Region missing",
+      "rows_affected": 942,
+      "action": "942 recovered, 0 left unknown"
+    },
+    {
+      "file": "train",
+      "issue": "Units_Sold has thousands separator ('4,400')",
+      "rows_affected": 44,
+      "action": "commas removed"
+    },
+    {
+      "file": "train",
+      "issue": "Units_Sold is '-'",
+      "rows_affected": 217,
+      "action": "treated as 0 (no order): price and revenue are also 0"
+    },
+    {
+      "file": "train",
+      "issue": "Unit-of-measure slip: units counted in 10s, price per 10 (all India, 2021)",
+      "rows_affected": 385,
+      "action": "units x10, price / 10 (revenue was right)"
+    },
+    {
+      "file": "train",
+      "issue": "Unit_Price off by x100 (cents slip)",
+      "rows_affected": 614,
+      "action": "replaced by the SKU's price in that month"
+    },
+    {
+      "file": "train",
+      "issue": "Unit_Price off by x10 (price only)",
+      "rows_affected": 0,
+      "action": "replaced by the SKU's price in that month"
+    },
+    {
+      "file": "train",
+      "issue": "Units_Sold blank but revenue present",
+      "rows_affected": 2545,
+      "action": "units = revenue / SKU price"
+    },
+    {
+      "file": "train",
+      "issue": "Units_Sold blank, revenue and price are 0",
+      "rows_affected": 450,
+      "action": "treated as 0 (no order)"
+    },
+    {
+      "file": "train",
+      "issue": "Units_Sold unknown (order exists, quantity lost)",
+      "rows_affected": 332,
+      "action": "left missing for the model step"
+    },
+    {
+      "file": "train",
+      "issue": "Units_Sold negative",
+      "rows_affected": 491,
+      "action": "sign flipped (abs); flagged"
+    },
+    {
+      "file": "train",
+      "issue": "Unit_Price is 0",
+      "rows_affected": 36352,
+      "action": "filled with SKU price of that month (no-order rows get their list price; revenue stays 0)"
+    },
+    {
+      "file": "train",
+      "issue": "Units 10x too large (revenue is right)",
+      "rows_affected": 293,
+      "action": "units = revenue / price"
+    },
+    {
+      "file": "train",
+      "issue": "Units 100x too large (revenue is right)",
+      "rows_affected": 75,
+      "action": "units = revenue / price"
+    },
+    {
+      "file": "train",
+      "issue": "Revenue 10x too large (units are right)",
+      "rows_affected": 425,
+      "action": "revenue = units x price"
+    },
+    {
+      "file": "train",
+      "issue": "Revenue differs from units x price (other)",
+      "rows_affected": 156,
+      "action": "revenue recomputed"
+    },
+    {
+      "file": "train",
+      "issue": "Revenue 0 or missing although units > 0",
+      "rows_affected": 786,
+      "action": "revenue = units x price"
+    },
+    {
+      "file": "sku_master",
+      "issue": "BSS-018: sales start 2025-02 but Launch_Date is 2025-06",
+      "rows_affected": 16,
+      "action": "transactions trusted; effective launch = first sale"
+    },
+    {
+      "file": "train",
+      "issue": "Rows outside the SKU/region active window",
+      "rows_affected": 0,
+      "action": "none expected (rule 5 / region start)"
+    },
+    {
+      "file": "train",
+      "issue": "Months with NO row inside the active window",
+      "rows_affected": 982,
+      "action": "kept as missing (NOT zero); status = missing_row"
+    },
+    {
+      "file": "train",
+      "issue": "History cell empty, stockout file has shipped units",
+      "rows_affected": 27,
+      "action": "filled from inventory_stockouts"
+    },
+    {
+      "file": "train",
+      "issue": "History units differ from stockout file Shipped_Units",
+      "rows_affected": 36,
+      "action": "stockout file trusted"
+    },
+    {
+      "file": "macro_indicators",
+      "issue": "Duplicated month",
+      "rows_affected": 1,
+      "action": "kept the row closest to its neighbouring months"
+    },
+    {
+      "file": "macro_indicators",
+      "issue": "PMI decimal slip (4.79 instead of 47.9)",
+      "rows_affected": 1,
+      "action": "multiplied by 10"
+    },
+    {
+      "file": "macro_indicators",
+      "issue": "Auto_Production_YoY_Pct stored as a fraction, not percent (all of 2019)",
+      "rows_affected": 12,
+      "action": "multiplied by 100"
+    },
+    {
+      "file": "macro_indicators",
+      "issue": "Single missing indicator values",
+      "rows_affected": 5,
+      "action": "linear interpolation between neighbours"
+    },
+    {
+      "file": "macro_indicators",
+      "issue": "Months missing from 2019-01..2028-05",
+      "rows_affected": 0,
+      "action": "none expected"
+    },
+    {
+      "file": "events_calendar",
+      "issue": "Dates in mixed format (YYYY-MM and YYYY-MM-DD)",
+      "rows_affected": 95,
+      "action": "parsed to real dates; month-only end dates mean end of that month"
+    },
+    {
+      "file": "events_calendar",
+      "issue": "Open-ended event (no End_Date)",
+      "rows_affected": 1,
+      "action": "flagged Open_Ended, applies from Start onward"
+    },
+    {
+      "file": "events_calendar",
+      "issue": "Customer scope 'Customer | Region' in one field",
+      "rows_affected": 3,
+      "action": "split into Scope_Customer and Scope_Region"
+    },
+    {
+      "file": "test",
+      "issue": "Region inconsistent spelling",
+      "rows_affected": 0,
+      "action": "mapped to standard label"
+    },
+    {
+      "file": "test",
+      "issue": "Region missing",
+      "rows_affected": 0,
+      "action": "left blank for recovery step"
+    },
+    {
+      "file": "test",
+      "issue": "Sales_Channel inconsistent spelling",
+      "rows_affected": 0,
+      "action": "mapped to standard label"
+    },
+    {
+      "file": "test",
+      "issue": "Sales_Channel missing",
+      "rows_affected": 0,
+      "action": "left blank for recovery step"
+    },
+    {
+      "file": "test",
+      "issue": "Duplicate Date-SKU-Region keys",
+      "rows_affected": 0,
+      "action": "none expected"
+    },
+    {
+      "file": "test",
+      "issue": "Business_Unit contradicts its family",
+      "rows_affected": 0,
+      "action": "set from family -> BU mapping"
+    },
+    {
+      "file": "test",
+      "issue": "Rows after the SKU's EOL month (forecast must be 0, rule 5)",
+      "rows_affected": 156,
+      "action": "flagged After_EOL"
+    },
+    {
+      "file": "test",
+      "issue": "Series with no history (new launches)",
+      "rows_affected": 10,
+      "action": "flagged New_Series (use Replaces_SKU)"
+    }
+  ]
+}

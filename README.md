@@ -14,7 +14,7 @@ python -m venv .venv
 pip install -r requirements.txt
 # copy the 7 provided CSV files into data/raw/
 python run_pipeline.py            # cleaning -> anomalies -> backtest -> forecast (a few minutes)
-pytest -q                         # 38 automated checks
+pytest -q                         # 39 automated checks
 streamlit run dashboard/app.py    # the dashboard
 ```
 
@@ -33,7 +33,7 @@ pipeline/
   features.py        demand drivers: macro lead/lag with stability test, what-if sensitivities, EV shift, intermittency classes
   ranges.py          P10/P50/P90 ranges calibrated on backtest errors and checked on held-out origins
   planner.py         exception list for planners
-  tests/             38 pytest checks on every output
+  tests/             39 pytest checks on every output
 dashboard/app.py     Streamlit app (5 views, shared filters)
 run_pipeline.py      one command that rebuilds everything
 outputs/             generated files (see below)
@@ -75,7 +75,8 @@ outputs/             generated files (see below)
 - Final model `blend_gbm_seasonal`: 50/50 blend of the two. Chosen by `choose_final()`: lowest backtest WAPE, preferring the
   blend when it is within 0.005 of the best because it is more robust.
 - Rules on top of every model: zero after EOL and for lost accounts; new launches start from the predecessor's level times a
-  ramp measured on 21 past successions (42% / 90% / 121% / 108%); predecessors fade to 61% during the overlap;
+  ramp measured by the pipeline on 21 past predecessor -> successor series pairs (6 SKU pairs; `launch_ramp.csv`: 42% / 90% / 121% / 108%);
+  predecessors fade to 61% during the overlap (25 series);
   planned customer shutdown scaled by the measured Nexon-strike effect.
 - Rolling-origin backtest (origins 2023-03, 2024-03, 2025-03; 19-month horizon; every rule and the ML training data
   restricted to the period before the origin), scored against unconstrained demand:
@@ -120,14 +121,14 @@ The blend improves every region, every family and every horizon bucket over the 
 `clean_history.parquet`, `clean_test.parquet`, `clean_prices.parquet`, `clean_stockouts.parquet`,
 `clean_sku_master.parquet`, `clean_macro.csv`, `clean_events.csv`, `dq_report.json`,
 `unconstrained_history.parquet`, `anomaly_register.csv`, `series_regimes.csv`,
-`macro_leadlag.csv`, `macro_leadlag_grid.csv`, `macro_sensitivity.csv`, `ev_shift.csv`, `series_profile.csv`,
+`macro_leadlag.csv`, `macro_leadlag_grid.csv`, `macro_sensitivity.csv`, `ev_shift.csv`, `series_profile.csv`, `launch_ramp.csv`,
 `backtest_metrics.csv`, `forecast.csv`, `forecast_ranges.csv`, `forecast_ranges_aggregate.csv`, `range_calibration.csv`,
 `range_evaluation.csv`, `planner_exceptions.csv`, `submission.csv`.
 
 ## Assumptions and limitations
 
 - Negative units are treated as sign slips (size matches normal demand, neighbouring months are normal).
-- The new-launch ramp comes from only 21 past successor pairs and is the least certain part of the forecast.
+- The new-launch ramp comes from only 21 past predecessor -> successor series pairs (6 SKU pairs, `launch_ramp.csv`) and is the least certain part of the forecast.
 - Early buying before price rises was tested: correlation with the size of the rise is 0.56 on 6 years; only the 9% rise
   announced in Nov 2022 stands out, so it is reported but not modelled separately.
 - The planned Orion shutdown (Jul-Aug 2027) uses the Nexon strike as an analogue: an assumption.

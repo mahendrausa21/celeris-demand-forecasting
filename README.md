@@ -4,6 +4,8 @@ Individual submission, MKS AI & Data Hackathon, Phase 2.
 Cleans the raw ERP extract, finds and explains anomalies, forecasts `Units_Sold` for every row of
 `test.csv` (Nov 2026 - May 2028, 19 months) and serves a Streamlit dashboard for planners.
 
+**Live demo:** https://celeris-demand-forecasting-zqlhuerpsd4orp9rhzatni.streamlit.app/
+
 ## Quick start
 
 ```bash

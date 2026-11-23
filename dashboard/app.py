@@ -9,6 +9,8 @@ import plotly.graph_objects as go
 import streamlit as st
 from plotly.subplots import make_subplots
 
+from theme import PALETTE, css, plotly_template
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUTPUTS_DIR = BASE_DIR / "outputs"
@@ -17,59 +19,28 @@ OUTPUTS_DIR = BASE_DIR / "outputs"
 JAN_2027_PRICE_RISE = 1.045
 JAN_2028_PRICE_RISE = 1.04
 
-PRIMARY = "#0F766E"
-FORECAST = "#D97706"
-SLATE = "#475569"
-ERROR = "#DC2626"
-OK = "#16A34A"
+PRIMARY = PALETTE["primary"]
+FORECAST = PALETTE["forecast"]
+SLATE = PALETTE["secondary_text"]
+ERROR = PALETTE["error"]
+OK = PALETTE["ok"]
 CHART_COLORS = [PRIMARY, FORECAST, SLATE, ERROR, OK]
 
 st.set_page_config(page_title="Celeris Demand Forecasting", layout="wide")
-st.markdown(
-    """
-    <style>
-    #MainMenu, footer {visibility: hidden;}
-    [data-testid="stAppViewContainer"] {background: #F8FAFC;}
-    .main .block-container {max-width: 1440px; padding-top: 1.6rem; padding-bottom: 2.5rem;}
-    .product-header {
-        background: linear-gradient(120deg, #FFFFFF 0%, #F0FDFA 100%);
-        border: 1px solid #CBD5E1; border-radius: 18px;
-        padding: 1.25rem 1.5rem; margin-bottom: 1.25rem;
-    }
-    .product-header h1 {color: #0F172A; font-size: 1.8rem; margin: 0 0 .25rem 0;}
-    .product-header p {color: #475569; font-size: 1rem; margin: 0;}
-    .kpi-card {
-        background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px;
-        box-shadow: 0 6px 18px rgba(15, 23, 42, .07);
-        padding: 1.1rem 1.25rem; min-height: 112px;
-    }
-    .kpi-label {color: #64748B; font-size: .82rem; font-weight: 600; margin-bottom: .35rem;}
-    .kpi-value {color: #0F172A; font-size: 1.8rem; font-weight: 700; line-height: 1.15;}
-    .kpi-delta {font-size: .78rem; font-weight: 600; margin-top: .55rem;}
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-st.markdown(
-    """
-    <div class="product-header">
-      <h1>Celeris Demand Forecasting &amp; Planning Control Tower</h1>
-      <p>Monitor demand signals, forecast performance, and data quality in one place.</p>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-st.caption("History: Jan 2019 - Oct 2026  |  Forecast: Nov 2026 - May 2028")
+st.markdown(css(), unsafe_allow_html=True)
 
 
 def render_kpi_card(column, label, value, delta=None):
     delta_html = ""
     if delta:
-        delta_html = f'<div class="kpi-delta" style="color: {PRIMARY};">{html.escape(delta)}</div>'
+        arrow = "↘" if "-" in delta else "↗"
+        delta_html = (
+            f'<div class="kpi-delta">{arrow} {html.escape(delta)}</div>'
+        )
     column.markdown(
         f"""
         <div class="kpi-card">
-          <div class="kpi-label">{html.escape(label)}</div>
+          <div class="kpi-label"><span class="kpi-icon">📊</span>{html.escape(label)}</div>
           <div class="kpi-value">{html.escape(value)}</div>
           {delta_html}
         </div>
@@ -91,13 +62,17 @@ def chart_template(
         for trace in fig.data
     )
     fig.update_layout(
-        template="plotly_white",
+        template=plotly_template(),
         colorway=CHART_COLORS,
-        font=dict(family="Arial, sans-serif", size=12, color="#0F172A"),
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="#FFFFFF",
+        font=dict(family="Arial, sans-serif", size=13, color=PALETTE["text"]),
+        paper_bgcolor=PALETTE["background"],
+        plot_bgcolor=PALETTE["background"],
         margin=dict(l=24, r=20, t=68, b=36),
         hovermode=hovermode,
+        hoverlabel=dict(
+            bgcolor=PALETTE["background"],
+            font=dict(color=PALETTE["text"], size=12),
+        ),
         legend=dict(
             orientation="h",
             yanchor="bottom",
@@ -105,32 +80,35 @@ def chart_template(
             xanchor="right",
             x=1,
             title_text="",
+            font=dict(size=12, color=PALETTE["text"]),
         ),
     )
     fig.update_xaxes(
         showgrid=horizontal_bars,
-        gridcolor="#E2E8F0",
+        gridcolor=PALETTE["grid"],
         gridwidth=1,
         showline=False,
         zeroline=False,
-        title_font=dict(size=12, color=SLATE),
-        tickfont=dict(size=11, color=SLATE),
+        title_font=dict(size=13, color=SLATE),
+        tickfont=dict(size=12, color=SLATE),
     )
     fig.update_yaxes(
         showgrid=not horizontal_bars,
-        gridcolor="#E2E8F0",
+        gridcolor=PALETTE["grid"],
         gridwidth=1,
         showline=False,
         zeroline=False,
         tickformat=None if horizontal_bars else (",.1%" if value_format == ".1%" else value_format),
-        title_font=dict(size=12, color=SLATE),
-        tickfont=dict(size=11, color=SLATE),
+        title_font=dict(size=13, color=SLATE),
+        tickfont=dict(size=12, color=SLATE),
     )
     if horizontal_bars:
         fig.update_xaxes(tickformat=",.1%" if value_format == ".1%" else value_format)
     if secondary_y_format is not None:
         fig.update_yaxes(tickformat=secondary_y_format, secondary_y=True)
     for trace in fig.data:
+        if not trace.name or re.fullmatch(r"trace \d+", str(trace.name)):
+            trace.showlegend = False
         if trace.hovertemplate is None:
             label = trace.name or "Value"
             unit_suffix = "" if value_format.endswith("%") else f" {html.escape(unit)}"
@@ -179,6 +157,39 @@ def format_table(df, percentage_columns=()):
     return df.style.format(
         {column: "{:.1%}" for column in percentage_columns if column in df.columns}
     )
+
+
+def style_table(data):
+    styler = data if hasattr(data, "set_table_styles") else data.style
+    return styler.set_table_styles(
+        [
+            {
+                "selector": "th",
+                "props": [
+                    ("background-color", PALETTE["background"]),
+                    ("color", PALETTE["text"]),
+                    ("font-size", "14px"),
+                    ("font-weight", "700"),
+                ],
+            },
+            {
+                "selector": "td",
+                "props": [
+                    ("color", PALETTE["text"]),
+                    ("font-size", "14px"),
+                ],
+            },
+            {
+                "selector": "tbody tr:nth-child(even)",
+                "props": [("background-color", PALETTE["page_background"])],
+            },
+        ],
+        overwrite=False,
+    )
+
+
+def render_dataframe(data, **kwargs):
+    st.dataframe(style_table(data), **kwargs)
 
 
 @st.cache_data
@@ -492,7 +503,8 @@ def plot_timeline(
                 name="P10-P90 range",
                 line=dict(width=0),
                 fill="tonexty",
-                fillcolor="rgba(217, 119, 6, 0.16)",
+                fillcolor=FORECAST,
+                opacity=0.16,
                 hovertemplate=(
                     "Month: %{x|%b %Y}<br>P90: %{y:,.0f} units<extra></extra>"
                 ),
@@ -593,11 +605,13 @@ def reset_shared_filters():
 
 with st.sidebar:
     st.button("Reset filters", on_click=reset_shared_filters, key="reset_shared_filters", width="stretch")
-    selected_family = st.multiselect("Product_Family", family_options, key="shared_family")
-    selected_sku = st.multiselect("SKU_ID", sku_options, key="shared_sku")
-    selected_region = st.multiselect("Region", region_options, key="shared_region")
-    selected_channel = st.multiselect("Sales_Channel", channel_options, key="shared_channel")
-    selected_customer = st.multiselect("Customer_Name", customer_options, key="shared_customer")
+    with st.container(border=True):
+        st.markdown("**Demand scope**")
+        selected_family = st.multiselect("Product_Family", family_options, key="shared_family")
+        selected_sku = st.multiselect("SKU_ID", sku_options, key="shared_sku")
+        selected_region = st.multiselect("Region", region_options, key="shared_region")
+        selected_channel = st.multiselect("Sales_Channel", channel_options, key="shared_channel")
+        selected_customer = st.multiselect("Customer_Name", customer_options, key="shared_customer")
 
 selections = {
     "Product_Family": selected_family,
@@ -622,6 +636,16 @@ if history_filtered.empty and forecast_filtered.empty:
 
 
 if page == "About this project":
+    st.markdown(
+        """
+        <div class="product-header">
+          <h1>Celeris Demand Forecasting</h1>
+          <p>Monitor demand signals, forecast performance, and data quality in one place.</p>
+          <p class="data-range">History: Jan 2019 - Oct 2026 &nbsp; | &nbsp; Forecast: Nov 2026 - May 2028</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
     st.header("About this project")
     st.subheader("The problem")
     st.write(
@@ -670,6 +694,9 @@ if page == "About this project":
     forecast_units = float(forecast["Units_Forecast"].sum())
 
     st.subheader("At a glance")
+    st.caption(
+        "How to read this: The cards summarize data coverage, forecast scale, accuracy, and range calibration."
+    )
     kpis = st.columns(5)
     render_kpi_card(kpis[0], "Clean history rows", f"{clean_history_rows:,}")
     render_kpi_card(kpis[1], "Anomaly records", f"{anomaly_count:,}")
@@ -688,7 +715,9 @@ if page == "About this project":
     render_kpi_card(kpis[4], "Held-out P10-P90 coverage", f"{series_coverage:.1%}")
 
     st.subheader("Model comparison")
-    st.caption("WAPE and Bias are averaged across the rounded overall backtest results.")
+    st.caption(
+        "How to read this: WAPE and Bias are averaged across the rounded overall backtest results."
+    )
     comparison = overall_metrics.rename(
         columns={"model": "Model", "Rows": "Backtest rows"}
     )
@@ -700,7 +729,8 @@ if page == "About this project":
     comparison = comparison[["Model", "WAPE", "Bias", "Backtest rows"]]
     comparison_styled = format_table(comparison, ("WAPE", "Bias")).apply(
         lambda row: [
-            "background-color: #CCFBF1; font-weight: bold"
+            f"background-color: {PALETTE['background']}; "
+            f"color: {PALETTE['primary']}; font-weight: bold"
             if row["Model"] == final_model
             else ""
             for _ in row
@@ -712,7 +742,7 @@ if page == "About this project":
         percentage_columns=("WAPE", "Bias"),
         wide_columns=("Model",),
     )
-    st.dataframe(
+    render_dataframe(
         comparison_styled,
         column_config=comparison_config,
         width="stretch",
@@ -721,6 +751,9 @@ if page == "About this project":
     )
 
     st.subheader("Launch ramp")
+    st.caption(
+        "How to read this: Ratios compare successor demand with predecessor demand across historical launch pairs."
+    )
     ramp_table = about_launch_ramp.copy()
     ramp_table["Median ratio"] = ramp_table["Ratio_Median"].map("{:.1%}".format)
     ramp_table["P25-P75 range"] = ramp_table.apply(
@@ -730,7 +763,7 @@ if page == "About this project":
     ramp_table = ramp_table[
         ["Phase", "Median ratio", "P25-P75 range", "Pairs", "SKU_Pairs"]
     ]
-    st.dataframe(
+    render_dataframe(
         ramp_table,
         column_config=table_config(ramp_table, wide_columns=("Phase", "P25-P75 range")),
         width="stretch",
@@ -763,6 +796,9 @@ if page == "About this project":
     max_widening = aggregate_ranges["Widening_Factor"].max()
     bias_direction = "low" if final_metrics["Bias"] < 0 else "high"
     st.subheader("Known limitations")
+    st.caption(
+        "How to read this: Use these caveats to interpret the forecast metrics and lifecycle estimates."
+    )
     st.markdown(
         "\n".join(
             [
@@ -889,13 +925,16 @@ elif page == "Data health":
     issues = pd.DataFrame(dq["issues"])
 
     st.subheader("Data quality issues")
+    st.caption(
+        "How to read this: Issue counts show affected source rows and the documented remediation."
+    )
     if not issues.empty:
         grouped = (
             issues.groupby(["file", "issue"], as_index=False)
             .agg(rows_affected=("rows_affected", "sum"), action=("action", "first"))
             .sort_values(["file", "rows_affected"], ascending=[True, False])
         )
-        st.dataframe(
+        render_dataframe(
             grouped,
             column_config=table_config(grouped, wide_columns=("file", "issue", "action")),
             width="stretch",
@@ -1236,7 +1275,7 @@ elif page == "Anomaly monitor":
                         marker=dict(
                             color=category_colors.get(category, FORECAST),
                             size=9,
-                            line=dict(width=1, color="white"),
+                            line=dict(width=1, color=PALETTE["background"]),
                         ),
                         customdata=points[["Type", "Reason", "Action"]].fillna("").to_numpy(),
                         hovertemplate=(
@@ -1317,7 +1356,7 @@ elif page == "Anomaly monitor":
                 & (table_filtered["Date_End"].isna() | (table_filtered["Date_End"] >= range_start))
             ]
 
-        st.dataframe(
+        render_dataframe(
             table_filtered,
             column_config=table_config(table_filtered, wide_columns=("Reason", "Action")),
             hide_index=True,
@@ -1382,7 +1421,7 @@ elif page == "Forecast & accuracy":
         .agg(Units_Forecast=("Units_Forecast", "sum"))
         .sort_values("Units_Forecast", ascending=False)
     )
-    st.dataframe(
+    render_dataframe(
         adjustment_units,
         column_config=table_config(adjustment_units),
         hide_index=True,
@@ -1409,7 +1448,7 @@ elif page == "Forecast & accuracy":
             if grouped.empty:
                 st.info("No backtest rows available")
             else:
-                st.dataframe(
+                render_dataframe(
                     format_table(grouped, ("WAPE", "Bias")),
                     column_config=table_config(
                         grouped,
@@ -1446,7 +1485,8 @@ elif page == "Forecast & accuracy":
     overall = overall[["Model", "WAPE", "Bias", "Rows"]]
     overall_styled = overall.style.format({"WAPE": "{:.1%}", "Bias": "{:.1%}"}).apply(
         lambda row: [
-            "background-color: #CCFBF1; font-weight: bold"
+            f"background-color: {PALETTE['background']}; "
+            f"color: {PALETTE['primary']}; font-weight: bold"
             if row["Model"] == final_model
             else ""
             for _ in row
@@ -1459,7 +1499,7 @@ elif page == "Forecast & accuracy":
         wide_columns=("Model",),
     )
     overall_config["Model"] = st.column_config.TextColumn(pinned=True, width="large")
-    st.dataframe(
+    render_dataframe(
         overall_styled,
         column_config=overall_config,
         width="stretch",
@@ -1559,7 +1599,7 @@ elif page == "Procurement plan":
     st.caption(
         "Summing SKU-level P90s over-covers the true aggregate; use as the buffer if every SKU must be covered at P90."
     )
-    st.dataframe(
+    render_dataframe(
         procurement_summary,
         column_config=table_config(procurement_summary, wide_columns=("Group",)),
         width="stretch",
@@ -1620,6 +1660,9 @@ elif page == "Planner exceptions":
         render_kpi_card(column, f"{severity.title()} severity", f"{count:,}")
 
     st.subheader("Exceptions by type")
+    st.caption(
+        "How to read this: Counts show how planner exceptions are distributed by type."
+    )
     exception_types = (
         exceptions.groupby("Exception_Type", as_index=False)
         .size()
@@ -1649,6 +1692,9 @@ elif page == "Planner exceptions":
         render_plotly_chart(exception_figure, "exceptions")
 
     st.subheader("Filter planner exceptions")
+    st.caption(
+        "How to read this: Choose severity or segment values to narrow the exception table."
+    )
     f1, f2, f3, f4 = st.columns(4)
     with f1:
         severity_filter = st.multiselect(
@@ -1681,15 +1727,24 @@ elif page == "Planner exceptions":
     table_filtered = filter_multiselect(table_filtered, family_filter, "Product_Family")
     table_filtered = filter_multiselect(table_filtered, region_filter, "Region")
     severity_styles = {
-        "high": "background-color: #FEE2E2; color: #991B1B; font-weight: bold",
-        "medium": "background-color: #FEF3C7; color: #92400E; font-weight: bold",
-        "low": "background-color: #DCFCE7; color: #166534; font-weight: bold",
+        "high": (
+            f"background-color: {PALETTE['background']}; "
+            f"color: {PALETTE['error']}; font-weight: bold"
+        ),
+        "medium": (
+            f"background-color: {PALETTE['background']}; "
+            f"color: {PALETTE['forecast']}; font-weight: bold"
+        ),
+        "low": (
+            f"background-color: {PALETTE['background']}; "
+            f"color: {PALETTE['ok']}; font-weight: bold"
+        ),
     }
     styled_exceptions = format_table(table_filtered, ("Change_Pct",)).apply(
         lambda column: [severity_styles.get(value, "") for value in column],
         subset=["Severity"],
     )
-    st.dataframe(
+    render_dataframe(
         styled_exceptions,
         column_config=table_config(
             table_filtered,
@@ -1905,7 +1960,7 @@ elif page == "Stockouts & lost sales":
         top_figure.update_xaxes(title="Lost units")
         top_figure.update_yaxes(categoryorder="total ascending")
         render_plotly_chart(top_figure, "units")
-        st.dataframe(
+        render_dataframe(
             top_sku_regions,
             column_config=table_config(
                 top_sku_regions,
@@ -1947,6 +2002,9 @@ elif page == "Lifecycle":
     )
 
     st.subheader("Launches and EOLs by lifecycle status")
+    st.caption(
+        "How to read this: Counts summarize launch and end-of-life records across lifecycle statuses."
+    )
     lifecycle_summary = (
         lifecycle_master.groupby("Lifecycle_Status", as_index=False)
         .agg(
@@ -1957,7 +2015,7 @@ elif page == "Lifecycle":
         )
         .sort_values("Lifecycle_Status")
     )
-    st.dataframe(
+    render_dataframe(
         lifecycle_summary,
         column_config=table_config(lifecycle_summary),
         width="stretch",
@@ -1976,7 +2034,7 @@ elif page == "Lifecycle":
             "Master_Data_Error",
         ]
     ].sort_values(["Lifecycle_Status", "Launch_Date", "SKU_ID"])
-    st.dataframe(
+    render_dataframe(
         lifecycle_detail,
         column_config=table_config(
             lifecycle_detail,
@@ -1999,6 +2057,9 @@ elif page == "Lifecycle":
         )
     ]
     st.subheader("Lifecycle event timeline")
+    st.caption(
+        "How to read this: Markers show launch and EOL dates for each selected SKU; legend labels identify statuses."
+    )
     if timeline_skus.empty:
         st.info("No lifecycle events match the current sidebar filters.")
     else:
@@ -2052,6 +2113,9 @@ elif page == "Lifecycle":
         & replacement_pairs["SKU_ID"].isin(filtered_forecast_skus)
     ].sort_values(["Replaces_SKU", "SKU_ID"])
     st.subheader("Predecessor and successor forecast")
+    st.caption(
+        "How to read this: Select a SKU pair to compare their monthly forecast profiles."
+    )
     if replacement_pairs.empty:
         st.info("No predecessor/successor pairs have both forecasts available under the current sidebar filters.")
     else:
@@ -2191,10 +2255,10 @@ elif page == "Macro drivers":
                 text=lag_matrix.to_numpy(),
                 customdata=signal_matrix.to_numpy(),
                 texttemplate="%{text}",
-                textfont=dict(size=10, color="#0F172A"),
+                textfont=dict(size=13, color=PALETTE["text"]),
                 colorscale=[
                     [0, ERROR],
-                    [0.5, "#F8FAFC"],
+                    [0.5, PALETTE["page_background"]],
                     [1, PRIMARY],
                 ],
                 zmin=-1,
@@ -2219,6 +2283,9 @@ elif page == "Macro drivers":
         render_plotly_chart(heatmap, "correlation")
 
         st.subheader("Correlation by lag")
+        st.caption(
+            "How to read this: The curve shows correlation at each tested leading-indicator lag."
+        )
         selection_columns = st.columns(2)
         family_options = sorted(best_lags["Family"].unique().tolist())
         selected_macro_family = selection_columns[0].selectbox(
@@ -2270,6 +2337,9 @@ elif page == "Macro drivers":
         render_plotly_chart(lag_figure, "correlation", value_format=".3f")
 
         st.subheader("Stable relationships")
+        st.caption(
+            "How to read this: These rows list relationships that passed the stability checks described above."
+        )
         stable_relationships = (
             leadlag[leadlag["Signal"] == "stable"][
                 ["Family", "Indicator", "Best_Lag", "Corr", "Corr_H1", "Corr_H2"]
@@ -2283,7 +2353,7 @@ elif page == "Macro drivers":
             stable_styled = stable_relationships.style.format(
                 {"Corr": "{:.3f}", "Corr_H1": "{:.3f}", "Corr_H2": "{:.3f}"}
             )
-            st.dataframe(
+            render_dataframe(
                 stable_styled,
                 column_config={
                     "Family": st.column_config.TextColumn(width="large"),
@@ -2407,7 +2477,8 @@ elif page == "What-if":
                     name="Slope H1/H2 range",
                     line=dict(width=0),
                     fill="tonexty",
-                    fillcolor="rgba(217, 119, 6, 0.14)",
+                    fillcolor=FORECAST,
+                    opacity=0.14,
                     hovertemplate="Month: %{x|%b %Y}<br>High range: %{y:,.0f} units<extra></extra>",
                 )
             )
@@ -2468,9 +2539,12 @@ elif page == "What-if":
             )
             st.subheader("Scenario units by family")
             st.caption(
+                "How to read this: Compare base and scenario forecast totals alongside the sensitivity range."
+            )
+            st.caption(
                 "Families without a stable relationship for the selected indicator remain at the base forecast."
             )
-            st.dataframe(
+            render_dataframe(
                 format_table(family_scenario, ("Change",)),
                 column_config=table_config(
                     family_scenario,

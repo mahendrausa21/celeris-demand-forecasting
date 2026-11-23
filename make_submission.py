@@ -47,6 +47,7 @@ def build_zip():
                 if SKIP & set(f.parts) or f.suffix == ".pyc":
                     continue
                 z.write(f, f.relative_to(ROOT))
+        z.write(ROOT / "outputs" / "submission.csv", "submission.csv")      # prediction file also at the top level of the zip
     return PKG / "source.zip"
 
 

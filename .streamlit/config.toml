@@ -2,8 +2,26 @@
 base = "light"
 primaryColor = "#0F766E"
 backgroundColor = "#F8FAFC"
-secondaryBackgroundColor = "#E2E8F0"
+secondaryBackgroundColor = "#FFFFFF"
 textColor = "#0F172A"
+linkColor = "#0F766E"
+borderColor = "#E2E8F0"
+grayColor = "#475569"
+redColor = "#B91C1C"
+orangeColor = "#B45309"
+greenColor = "#15803D"
+baseFontSize = 16
+metricValueFontSize = "2rem"
+dataframeHeaderBackgroundColor = "#FFFFFF"
+dataframeHeaderTextColor = "#0F172A"
 font = "sans serif"
-chartCategoricalColors = ["#0F766E", "#D97706", "#475569", "#DC2626", "#16A34A"]
+chartCategoricalColors = ["#0F766E", "#B45309", "#475569", "#B91C1C", "#15803D"]
 showWidgetBorder = true
+showSidebarBorder = true
+
+[theme.sidebar]
+backgroundColor = "#F8FAFC"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#0F172A"
+primaryColor = "#0F766E"
+borderColor = "#E2E8F0"

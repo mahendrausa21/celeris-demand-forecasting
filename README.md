@@ -34,7 +34,7 @@ pipeline/
   ranges.py          P10/P50/P90 ranges calibrated on backtest errors and checked on held-out origins
   planner.py         exception list for planners
   tests/             39 pytest checks on every output
-dashboard/app.py     Streamlit app (5 views, shared filters)
+dashboard/app.py     Streamlit app (14 views, shared filters)
 run_pipeline.py      one command that rebuilds everything
 outputs/             generated files (see below)
 ```
